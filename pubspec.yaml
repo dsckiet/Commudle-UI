@@ -1,0 +1,12 @@
+name: commudle
+description: Commudle UI
+
+dependencies:
+  flutter:
+    sdk: flutter
+
+flutter:
+  uses-material-design: true
+
+  assets:
+    - images/commudle-logo.png
