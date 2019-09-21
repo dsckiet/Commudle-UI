@@ -16,5 +16,15 @@ flutter_icons:
 flutter:
   uses-material-design: true
 
+  fonts:
+    - family: Montserrat
+      fonts:
+        - asset: assets/fonts/Montserrat-Regular.ttf
+        - asset: assets/fonts/Montserrat-Bold.ttf
+          weight: 600
+
   assets:
-    - images/commudle-logo.png
+    - assets/images/commudle-logo.png
+    - assets/images/introPageImage.png
+    - assets/images/authPageImage.png
+    - assets/images/googlelogo.png

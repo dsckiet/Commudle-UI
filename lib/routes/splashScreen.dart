@@ -1,3 +1,4 @@
+<<<<<<< HEAD:lib/splashScreen.dart
 import 'package:flutter/material.dart';
 import 'dart:async';
 
@@ -58,3 +59,51 @@ class _SplashScreenState extends State<SplashScreen> {
     );
   }
 }
+=======
+import 'package:flutter/material.dart';
+import 'dart:async';
+
+import 'package:commudle/widgets/animatedBackground.dart';
+
+class SplashScreen extends StatefulWidget {
+  @override
+  _SplashScreenState createState() => new _SplashScreenState();
+}
+
+class _SplashScreenState extends State<SplashScreen> {
+  startTime() async {
+    var _duration = new Duration(seconds: 2);
+    return new Timer(_duration, navigationPage);
+  }
+
+  void navigationPage() {
+    Navigator.of(context).pushReplacementNamed('/IntroScreen');
+  }
+
+  @override
+  void initState() {
+    super.initState();
+    startTime();
+  }
+
+  @override
+  Widget build(BuildContext context) {
+    return new Scaffold(
+      body: new Center(
+        child: Center(
+          child: Stack(
+            children: <Widget>[
+              Positioned.fill(child: AnimatedBackground()),
+              Positioned.fill(
+                child: Center(
+                  child: Image.asset('assets/images/commudle-logo.png',width: 500, height: 100),
+                ),
+              ),
+            ],
+          ),
+        ),
+      ),
+    );
+  }
+}
+>>>>>>> da9aedd7b3aa33ef9aaca882dd4875a7f03f0460:lib/routes/splashScreen.dart
