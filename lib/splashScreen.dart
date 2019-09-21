@@ -10,7 +10,7 @@ class SplashScreen extends StatefulWidget {
 
 class _SplashScreenState extends State<SplashScreen> {
   startTime() async {
-    var _duration = new Duration(seconds: 2);
+    var _duration = new Duration(seconds: 5);
     return new Timer(_duration, navigationPage);
   }
 
@@ -26,7 +26,20 @@ class _SplashScreenState extends State<SplashScreen> {
 
   @override
   Widget build(BuildContext context) {
-    return new Scaffold(
+    // return Scaffold(
+    //   body: Center(
+    //       child: Container(
+    //     decoration: BoxDecoration(
+    //         gradient: LinearGradient(
+    //           begin: Alignment.topCenter,
+    //           end: Alignment.bottomCenter,
+    //           colors: [Color(0xff4F73FF), Color(0xff28A6FF)])),
+    //     child: Center(
+    //       child: new Image.asset('images/commudle-logo.png', width: 500, height: 100),
+    //       ),
+    //     ),
+    //   )); 
+    return Scaffold(
       body: new Center(
         child: Center(
           child: Stack(
