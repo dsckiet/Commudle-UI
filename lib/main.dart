@@ -4,7 +4,6 @@ import 'package:commudle/routes/splashScreen.dart';
 import 'package:commudle/routes/introScreen.dart';
 import 'package:commudle/routes/authScreen.dart';
 
-
 void main() => runApp(MyApp());
 
 class MyApp extends StatelessWidget {
@@ -12,7 +11,8 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       title: "Commudle",
-      theme:ThemeData(
+
+      theme: ThemeData(
         fontFamily: 'Montserrat',
         primaryColor: const Color(0xFF4285F4),
       ),

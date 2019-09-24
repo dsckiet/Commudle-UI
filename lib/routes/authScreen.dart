@@ -30,7 +30,7 @@ class _AuthScreenState extends State<AuthScreen> {
                   shape: RoundedRectangleBorder(
                       borderRadius: BorderRadius.circular(8.0)),
                   padding:
-                  EdgeInsets.symmetric(vertical: 8.0, horizontal: 16.0),
+                      EdgeInsets.symmetric(vertical: 8.0, horizontal: 16.0),
                   onPressed: () => {},
                   child: Row(
                     children: <Widget>[
