@@ -15,7 +15,7 @@ class _SplashScreenState extends State<SplashScreen> {
   }
 
   void navigationPage() {
-    Navigator.of(context).pushReplacementNamed('/HomeScreen');
+    Navigator.of(context).pushReplacementNamed('/IntroScreen');
   }
 
   @override
@@ -47,8 +47,7 @@ class _SplashScreenState extends State<SplashScreen> {
               Positioned.fill(child: AnimatedBackground()),
               Positioned.fill(
                 child: Center(
-                  child: new Image.asset('images/commudle-logo.png',
-                      width: 500, height: 100),
+                  child: new Image.asset('assets/images/commudle-logo.png', width: 500, height: 100),
                 ),
               ),
             ],
