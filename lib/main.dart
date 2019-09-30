@@ -1,3 +1,4 @@
+import 'package:commudle/routes/home_screen.dart';
 import 'package:flutter/material.dart';
 
 import 'package:commudle/routes/splashScreen.dart';
@@ -11,15 +12,39 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       title: "Commudle",
-
       theme: ThemeData(
-        fontFamily: 'Montserrat',
-        primaryColor: const Color(0xFF4285F4),
-      ),
+          primaryColor: const Color(0xFF4285F4),
+          textTheme: ThemeData
+              .light()
+              .textTheme
+              .copyWith(
+              headline: TextStyle(
+                fontSize: 24,
+                fontFamily: 'Montserrat',
+                color: const Color(0xFF707070),
+                fontWeight: FontWeight.w600,
+              ),
+              title: TextStyle(
+                fontSize: 20.0,
+                fontWeight: FontWeight.w600,
+                color: const Color(0xFF707070),
+              ),
+              body1: TextStyle(
+                fontSize: 16.0,
+                fontWeight: FontWeight.w600,
+                color: const Color(0xFF707070),
+              ),
+              body2: TextStyle(
+                  fontSize: 14.0,
+                  fontWeight: FontWeight.w600,
+                  color: const Color(0xFF707070)
+              )
+          )),
       home: SplashScreen(),
       routes: <String, WidgetBuilder>{
         '/IntroScreen': (BuildContext context) => IntroScreen(),
         '/AuthScreen': (BuildContext context) => AuthScreen(),
+        '/HomeScreen': (BuildContext context) =>HomeScreen(),
       },
     );
   }

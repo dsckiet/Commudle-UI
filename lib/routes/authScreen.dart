@@ -23,20 +23,18 @@ class _AuthScreenState extends State<AuthScreen> {
               ),
               const Image(image: AssetImage('assets/images/authPageImage.png')),
               Padding(padding: EdgeInsets.only(top: 32.0)),
-              SizedBox(
-                width: 278,
-                height: 48.0,
+              FittedBox(
                 child: RaisedButton(
                   shape: RoundedRectangleBorder(
                       borderRadius: BorderRadius.circular(8.0)),
                   padding:
                       EdgeInsets.symmetric(vertical: 8.0, horizontal: 16.0),
-                  onPressed: () => {},
+                  onPressed: navigationPage,
                   child: Row(
                     children: <Widget>[
                       Image(
                         image: AssetImage('assets/images/googlelogo.png'),
-                        height: 48,
+                        height: 36,
                       ),
                       Padding(
                         padding: EdgeInsets.only(left: 8.0),
@@ -58,22 +56,14 @@ class _AuthScreenState extends State<AuthScreen> {
               ),
               Text(
                 "Privacy Policy",
-                style: TextStyle(
-                  fontSize: 16.0,
-                  fontWeight: FontWeight.w800,
-                  color: const Color(0xFF707070),
-                ),
+                style: Theme.of(context).textTheme.body1,
               ),
               Expanded(
                 child: Align(
                   alignment: FractionalOffset.bottomCenter,
                   child: Text(
                     "Skip >>",
-                    style: TextStyle(
-                      fontSize: 16.0,
-                      fontWeight: FontWeight.w800,
-                      color: const Color(0xFF707070),
-                    ),
+                    style: Theme.of(context).textTheme.body1,
                   ),
                 ),
               ),
@@ -82,5 +72,8 @@ class _AuthScreenState extends State<AuthScreen> {
         ),
       ),
     );
+  }
+  void navigationPage() {
+    Navigator.of(context).pushReplacementNamed('/HomeScreen');
   }
 }

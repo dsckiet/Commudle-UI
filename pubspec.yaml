@@ -6,12 +6,12 @@ dependencies:
   flutter:
     sdk: flutter
 
-# flutter_launcher_icons: "^0.6.1"
+  flutter_launcher_icons: "^0.7.3"
 
-# flutter_icons:
-#   image_path: "images/commudle-logo.png" 
-#   android: true
-#   ios: true
+flutter_icons:
+  image_path: "images/commudle-logo.png" 
+  android: true
+  ios: true
 
 flutter:
   uses-material-design: true
@@ -28,3 +28,5 @@ flutter:
     - assets/images/introPageImage.png
     - assets/images/authPageImage.png
     - assets/images/googlelogo.png
+    - assets/images/gdg_lockup.png
+    - assets/images/eventImageSquare.png
