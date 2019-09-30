@@ -67,10 +67,7 @@ class _HomeScreenState extends State<HomeScreen> {
             children: <Widget>[
               Text(
                 "My next event",
-                style: TextStyle(
-                    fontSize: 20,
-                    color: const Color(0xFF707070),
-                    fontWeight: FontWeight.w600),
+                style: Theme.of(context).textTheme.title,
               ),
               Text(
                 "Registered Events",
@@ -83,7 +80,7 @@ class _HomeScreenState extends State<HomeScreen> {
           ),
         ),
         Padding(
-          padding: EdgeInsets.only(top: 16.0, left: 20.0, right: 20.0),
+          padding: EdgeInsets.only( left: 20.0, right: 20.0),
           child: Container(
             child: ListView(
               physics: const NeverScrollableScrollPhysics(),
@@ -106,35 +103,38 @@ class _HomeScreenState extends State<HomeScreen> {
         Padding(
           padding: EdgeInsets.symmetric(horizontal: 20.0),
           child: Row(
+            mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: <Widget>[
               Text(
                 "Upcoming Events",
-                style: TextStyle(
-                    fontSize: 20,
-                    color: const Color(0xFF707070),
-                    fontWeight: FontWeight.w600),
+                style: Theme.of(context).textTheme.title,
               ),
+              Text(
+                "See All",
+                style: TextStyle(
+                    fontSize: 14.0,
+                    color: const Color(0xFFDB4437),
+                    fontWeight: FontWeight.w600),
+              )
             ],
           ),
         ),
         Padding(
-          padding: EdgeInsets.only(top: 16.0, left: 20.0, right: 20.0),
+          padding: EdgeInsets.only(left: 20.0, right: 20.0),
           child: Container(
-            child:ListView(
-              physics: const NeverScrollableScrollPhysics(),
-              shrinkWrap: true,
-              children: <Widget>[
-                UpcomingEventCard(),
-                UpcomingEventCard(),
-                UpcomingEventCard(),
-              ],
-            )
-          ),
+              child: ListView(
+            physics: const NeverScrollableScrollPhysics(),
+            shrinkWrap: true,
+            children: <Widget>[
+              UpcomingEventCard(),
+              UpcomingEventCard(),
+              UpcomingEventCard(),
+            ],
+          )),
         )
       ],
     );
   }
-
 
   @override
   Widget build(BuildContext context) {
@@ -158,6 +158,7 @@ class _HomeScreenState extends State<HomeScreen> {
                 child: nextEventWidget(),
               ),
               Container(
+                padding: EdgeInsets.symmetric(vertical: 20.0),
                 child: upcomingEvents(),
               ),
             ],
