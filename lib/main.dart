@@ -1,9 +1,14 @@
+import 'package:commudle/routes/about_screen.dart';
+import 'package:commudle/routes/communities_list_screen.dart';
+import 'package:commudle/routes/events_screen.dart';
 import 'package:commudle/routes/home_screen.dart';
+import 'package:commudle/routes/registered_event_screen.dart';
+import 'package:commudle/routes/registered_events_list_screen.dart';
 import 'package:flutter/material.dart';
 
-import 'package:commudle/routes/splashScreen.dart';
-import 'package:commudle/routes/introScreen.dart';
-import 'package:commudle/routes/authScreen.dart';
+import 'package:commudle/routes/splash_screen.dart';
+import 'package:commudle/routes/intro_screen.dart';
+import 'package:commudle/routes/auth_screen.dart';
 
 void main() => runApp(MyApp());
 
@@ -43,6 +48,8 @@ class MyApp extends StatelessWidget {
         '/IntroScreen': (BuildContext context) => IntroScreen(),
         '/AuthScreen': (BuildContext context) => AuthScreen(),
         '/HomeScreen': (BuildContext context) => HomeScreen(),
+        '/CommunitiesListScreen': (BuildContext context) =>
+            CommunitiesListScreen(),
       },
     );
   }

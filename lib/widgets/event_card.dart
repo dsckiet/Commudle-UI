@@ -1,11 +1,11 @@
 import 'package:flutter/material.dart';
 
-class UpcomingEventCard extends StatefulWidget {
+class EventCard extends StatefulWidget {
   @override
-  _UpcomingEventCardState createState() => _UpcomingEventCardState();
+  _EventCardState createState() => _EventCardState();
 }
 
-class _UpcomingEventCardState extends State<UpcomingEventCard> {
+class _EventCardState extends State<EventCard> {
   @override
   Widget build(BuildContext context) {
     return Card(
@@ -19,17 +19,19 @@ class _UpcomingEventCardState extends State<UpcomingEventCard> {
             image: AssetImage('assets/images/upcomingCardBack.png'),
           ),
         ),
-//        ClipRRect(
-//          borderRadius: BorderRadius.all(Radius.circular(8.0)),
-//          child: DecoratedBox(
-//            decoration: BoxDecoration(
-//              gradient: LinearGradient(
-//                  begin: Alignment.topCenter,
-//                  end: Alignment.bottomCenter,
-//                  colors: [const Color(0x33000000), const Color(0xFF545454)]),
-//            ),
-//          ),
-//        ),
+        ClipRRect(
+          borderRadius: BorderRadius.all(Radius.circular(8.0)),
+          child: Container(
+            child: DecoratedBox(
+              decoration: BoxDecoration(
+                gradient: LinearGradient(
+                    begin: Alignment.topCenter,
+                    end: Alignment.bottomCenter,
+                    colors: [const Color(0x33000000), const Color(0xFF545454)]),
+              ),
+            ),
+          ),
+        ),
         Container(
           padding: EdgeInsets.only(
             left: 12.0,

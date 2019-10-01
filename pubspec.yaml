@@ -20,6 +20,8 @@ flutter:
     - family: Montserrat
       fonts:
         - asset: assets/fonts/Montserrat-Regular.ttf
+        - asset: assets/fonts/Montserrat-SemiBold.ttf
+          weight: 400
         - asset: assets/fonts/Montserrat-Bold.ttf
           weight: 600
 
@@ -32,3 +34,4 @@ flutter:
     - assets/images/eventImageSquare.png
     - assets/images/upcomingCardBack.png
     - assets/images/temp-wtm.png
+    - assets/images/hello.png
