@@ -16,7 +16,7 @@ class MyApp extends StatelessWidget {
           primaryColor: const Color(0xFF4285F4),
           textTheme: ThemeData.light().textTheme.copyWith(
               headline: TextStyle(
-                fontSize: 24,
+                fontSize: 26,
                 fontFamily: 'Montserrat',
                 color: const Color(0xFF707070),
                 fontWeight: FontWeight.w600,
