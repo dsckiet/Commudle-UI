@@ -1,6 +1,6 @@
 import 'package:commudle/widgets/community_card.dart';
 import 'package:commudle/widgets/next_event_card.dart';
-import 'package:commudle/widgets/upcoming_event_card.dart';
+import 'package:commudle/widgets/event_card.dart';
 import 'package:flutter/material.dart';
 
 class HomeScreen extends StatefulWidget {
@@ -27,7 +27,7 @@ class _HomeScreenState extends State<HomeScreen> {
                     fontSize: 14.0,
                     color: const Color(0xFFDB4437),
                     fontWeight: FontWeight.w600),
-              )
+              ),
             ],
           ),
         ),
@@ -80,7 +80,7 @@ class _HomeScreenState extends State<HomeScreen> {
           ),
         ),
         Padding(
-          padding: EdgeInsets.only( left: 20.0, right: 20.0),
+          padding: EdgeInsets.only(left: 20.0, right: 20.0),
           child: Container(
             child: ListView(
               physics: const NeverScrollableScrollPhysics(),
@@ -109,13 +109,6 @@ class _HomeScreenState extends State<HomeScreen> {
                 "Upcoming Events",
                 style: Theme.of(context).textTheme.title,
               ),
-              Text(
-                "See All",
-                style: TextStyle(
-                    fontSize: 14.0,
-                    color: const Color(0xFFDB4437),
-                    fontWeight: FontWeight.w600),
-              )
             ],
           ),
         ),
@@ -126,9 +119,9 @@ class _HomeScreenState extends State<HomeScreen> {
             physics: const NeverScrollableScrollPhysics(),
             shrinkWrap: true,
             children: <Widget>[
-              UpcomingEventCard(),
-              UpcomingEventCard(),
-              UpcomingEventCard(),
+              EventCard(),
+              EventCard(),
+              EventCard(),
             ],
           )),
         )
