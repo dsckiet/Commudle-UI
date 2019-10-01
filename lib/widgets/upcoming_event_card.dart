@@ -12,12 +12,30 @@ class _UpcomingEventCardState extends State<UpcomingEventCard> {
       shape: RoundedRectangleBorder(
           borderRadius: BorderRadius.all(Radius.circular(8.0))),
       child: Stack(children: <Widget>[
-        Padding(
-          padding: EdgeInsets.only(left: 12.0, top: 24.0, bottom: 24.0),
+        ClipRRect(
+          borderRadius: BorderRadius.all(Radius.circular(8.0)),
+          child: Image(
+            height: 100.0,
+            image: AssetImage('assets/images/upcomingCardBack.png'),
+          ),
+        ),
+//        ClipRRect(
+//          borderRadius: BorderRadius.all(Radius.circular(8.0)),
+//          child: DecoratedBox(
+//            decoration: BoxDecoration(
+//              gradient: LinearGradient(
+//                  begin: Alignment.topCenter,
+//                  end: Alignment.bottomCenter,
+//                  colors: [const Color(0x33000000), const Color(0xFF545454)]),
+//            ),
+//          ),
+//        ),
+        Container(
+          padding: EdgeInsets.only(
+            left: 12.0,
+          ),
           child: Row(
-            mainAxisSize: MainAxisSize.max,
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
-            crossAxisAlignment: CrossAxisAlignment.center,
             children: <Widget>[
               Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
@@ -28,7 +46,7 @@ class _UpcomingEventCardState extends State<UpcomingEventCard> {
                         "WTM New Delhi",
                         style: TextStyle(
                           fontSize: 14.0,
-//                            color: Colors.white,
+                          color: Colors.white,
                           fontWeight: FontWeight.w600,
                         ),
                       ),
@@ -45,7 +63,7 @@ class _UpcomingEventCardState extends State<UpcomingEventCard> {
                     "Web Developer Day-3",
                     style: TextStyle(
                         fontSize: 18.0,
-//                          color: Colors.white,
+                        color: Colors.white,
                         fontWeight: FontWeight.w600),
                   )
                 ],
