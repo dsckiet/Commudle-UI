@@ -15,7 +15,7 @@ class _NextEventCardState extends State<NextEventCard> {
         crossAxisAlignment: CrossAxisAlignment.center,
         children: <Widget>[
           ClipRRect(
-            borderRadius: BorderRadius.all(Radius.circular(8)),
+            borderRadius: BorderRadius.all(Radius.circular(8.0)),
             child: Image(
               image: AssetImage('assets/images/eventImageSquare.png'),
               width: MediaQuery.of(context).size.width * 0.25,
