@@ -35,3 +35,7 @@ flutter:
     - assets/images/upcomingCardBack.png
     - assets/images/temp-wtm.png
     - assets/images/hello.png
+    - assets/images/twitter.png
+    - assets/images/github.png
+    - assets/images/linkedin.png
+    - assets/images/profileImage.png
