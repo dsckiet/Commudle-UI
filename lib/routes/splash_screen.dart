@@ -37,7 +37,7 @@ class _SplashScreenState extends State<SplashScreen> {
         child: GestureDetector(
           child: AnimatedOpacity(
             duration: Duration(milliseconds: 5000),
-            opacity: this._opacity,
+            opacity: this._opacity = 1.0 - this._opacity,
             child: DecoratedBox(
               decoration: BoxDecoration(
                   gradient: LinearGradient(
@@ -54,6 +54,7 @@ class _SplashScreenState extends State<SplashScreen> {
               },
         ),
       ),
+
     ]),
   );
   }

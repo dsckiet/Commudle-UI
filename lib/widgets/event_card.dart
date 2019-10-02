@@ -9,15 +9,22 @@ class _EventCardState extends State<EventCard> {
   @override
   Widget build(BuildContext context) {
     return Card(
+      semanticContainer: true,
+      clipBehavior: Clip.antiAliasWithSaveLayer,
       shape: RoundedRectangleBorder(
           borderRadius: BorderRadius.all(Radius.circular(8.0))),
       child: Stack(children: <Widget>[
         ClipRRect(
           borderRadius: BorderRadius.all(Radius.circular(8.0)),
+          // child: Container(
+          //   height: 100.0,
           child: Image(
-            height: 100.0,
+            height: 100,
+            width: double.infinity,
+            fit: BoxFit.cover,
             image: AssetImage('assets/images/upcomingCardBack.png'),
           ),
+          // ),
         ),
         ClipRRect(
           borderRadius: BorderRadius.all(Radius.circular(8.0)),
