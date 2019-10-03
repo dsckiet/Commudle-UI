@@ -52,7 +52,7 @@ class _TeamScreenState extends State<TeamScreen> {
                   crossAxisCount: 2,
                   mainAxisSpacing: 4.0,
                   crossAxisSpacing: 4.0,
-                  childAspectRatio: (MediaQuery.of(context).size.width/3.3) / (MediaQuery.of(context).size.height/4.4),
+                  childAspectRatio: (MediaQuery.of(context).size.width/3.3) / (MediaQuery.of(context).size.height/4.2),
                   shrinkWrap: true,
                   children: <Widget>[
                     MemberCard(),
