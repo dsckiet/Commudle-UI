@@ -45,7 +45,7 @@ class MyApp extends StatelessWidget {
                   fontFamily: 'Montserrat',
                   fontWeight: FontWeight.w600,
                   color: const Color(0xFF707070)))),
-      home: CommunityScreen(),
+      home: SplashScreen(),
       routes: <String, WidgetBuilder>{
         '/IntroScreen': (BuildContext context) => IntroScreen(),
         '/AuthScreen': (BuildContext context) => AuthScreen(),
