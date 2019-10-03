@@ -1,5 +1,6 @@
 import 'package:commudle/routes/about_screen.dart';
 import 'package:commudle/routes/communities_list_screen.dart';
+import 'package:commudle/routes/community_screen.dart';
 import 'package:commudle/routes/events_screen.dart';
 import 'package:commudle/routes/home_screen.dart';
 import 'package:commudle/routes/registered_event_screen.dart';
