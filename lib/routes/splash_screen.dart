@@ -21,7 +21,7 @@ class _SplashScreenState extends State<SplashScreen> {
   @override
   void initState() {
     super.initState();
-    
+
   }
 
   @override
@@ -49,10 +49,10 @@ class _SplashScreenState extends State<SplashScreen> {
                       ])),
             ),
           ),
-              onTap: () {
-                setState(() => this._opacity = 1.0 - this._opacity);
-                startTime();
-              },
+          onTap: () {
+            setState(() => this._opacity = 1.0 - this._opacity);
+            startTime();
+          },
         ),
       ),
 
