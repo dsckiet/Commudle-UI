@@ -7,7 +7,9 @@ class SplashScreen extends StatefulWidget {
 }
 
 class _SplashScreenState extends State<SplashScreen> {
+
   double _opacity = 0.0;
+
 
   startTime() async {
     var _duration = new Duration(milliseconds: 3000);
@@ -36,7 +38,7 @@ class _SplashScreenState extends State<SplashScreen> {
         ),
         Container(
           child: AnimatedOpacity(
-            duration: Duration(milliseconds: 1500),
+            duration: Duration(milliseconds: 2600),
             opacity: this._opacity = 1.0 - this._opacity,
             child: DecoratedBox(
               decoration: BoxDecoration(
@@ -49,6 +51,7 @@ class _SplashScreenState extends State<SplashScreen> {
                   ])),
             ),
           ),
+
         ),
       ]),
     );
