@@ -44,14 +44,50 @@ class _TeamScreenState extends State<TeamScreen> {
                   style: Theme.of(context).textTheme.title,
                 ),
               ),
-        //       Container(
-        //         child: GridView(
-        //           shrinkWrap: true,
-        //           children: <Widget>[
-        //             MemberCard(),
-        //           ],
-        //         ),
-        //       )
+              Container(
+                padding: EdgeInsets.symmetric(horizontal: 20.0),
+                child: GridView.count(
+                  physics: const NeverScrollableScrollPhysics(),
+                  scrollDirection: Axis.vertical,
+                  crossAxisCount: 2,
+                  mainAxisSpacing: 4.0,
+                  crossAxisSpacing: 4.0,
+                  childAspectRatio: (MediaQuery.of(context).size.width/3.3) / (MediaQuery.of(context).size.height/4.2),
+                  shrinkWrap: true,
+                  children: <Widget>[
+                    MemberCard(),
+                    MemberCard(),
+                    MemberCard(),
+                    MemberCard(),
+                    MemberCard(),
+                  ],
+                ),
+              ),
+              Container(
+                padding: EdgeInsets.symmetric(horizontal: 20.0, vertical: 8.0),
+                child: Text(
+                  'Event Managers',
+                  style: Theme.of(context).textTheme.title,
+                ),
+              ),
+              Container(
+                padding: EdgeInsets.symmetric(horizontal: 20.0),
+                child: GridView.count(
+                  physics: const NeverScrollableScrollPhysics(),
+                  scrollDirection: Axis.vertical,
+                  crossAxisCount: 2,
+                  mainAxisSpacing: 4.0,
+                  crossAxisSpacing: 4.0,
+                  shrinkWrap: true,
+                  childAspectRatio: (MediaQuery.of(context).size.width/3.3) / (MediaQuery.of(context).size.height/4.4),
+                  children: <Widget>[
+                    MemberCard(),
+                    MemberCard(),
+                    MemberCard(),
+                    MemberCard(),
+                  ],
+                ),
+              ),
             ],
           ),
         ),
