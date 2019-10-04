@@ -44,14 +44,14 @@ class _TeamScreenState extends State<TeamScreen> {
                   style: Theme.of(context).textTheme.title,
                 ),
               ),
-              Container(
-                child: GridView(
-                  shrinkWrap: true,
-                  children: <Widget>[
-                    MemberCard(),
-                  ],
-                ),
-              )
+        //       Container(
+        //         child: GridView(
+        //           shrinkWrap: true,
+        //           children: <Widget>[
+        //             MemberCard(),
+        //           ],
+        //         ),
+        //       )
             ],
           ),
         ),

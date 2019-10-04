@@ -37,13 +37,8 @@ class _NextEventCardState extends State<NextEventCard> {
                 ),
                 Container(
                   child: Text(
-                    "DEV iO - Kickstart to Developer Career",
-                    //maxLines: 2,
-                    style: TextStyle(
-                        //fontSize: MediaQuery.of(context).,
-                        fontSize: 16,
-                        fontWeight: FontWeight.w600,
-                        color: const Color(0xFF707070)),
+                    '''DEV iO - Kickstart to Developer Career''',
+                  style: Theme.of(context).textTheme.body1,
                   ),
                 ),
                 Padding(
