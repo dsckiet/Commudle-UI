@@ -6,6 +6,8 @@ import 'package:commudle/routes/auth_screen.dart';
 import 'package:commudle/routes/communities_list_screen.dart';
 import 'package:commudle/routes/home_screen.dart';
 
+import 'package:commudle/routes/registered_event_screen.dart';
+
 void main() => runApp(MyApp());
 
 class MyApp extends StatelessWidget {
@@ -46,7 +48,7 @@ class MyApp extends StatelessWidget {
         '/AuthScreen': (BuildContext context) => AuthScreen(),
         '/HomeScreen': (BuildContext context) => HomeScreen(),
         '/CommunitiesListScreen': (BuildContext context) => CommunitiesListScreen(),
-        '/CommunitiesListScreen': (BuildContext context) => CommunitiesListScreen(),
+        '/RegisteredEventScreen': (BuildContext context) => RegisteredEvent(),
       },
     );
   }
