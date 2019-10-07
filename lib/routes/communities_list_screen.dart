@@ -14,13 +14,34 @@ class _CommunitiesListScreenState extends State<CommunitiesListScreen> {
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: <Widget>[
-            Padding(
-              padding: EdgeInsets.only(left: 20.0, top: 48.0),
-              child: Text(
-                "Communities",
-                style: Theme.of(context).textTheme.headline,
+            Container(
+              padding: EdgeInsets.only(
+                  left: 16.0, top: 48.0, bottom: 16.0, right: 16.0),
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                children: <Widget>[
+                  InkWell(
+                    onTap:(){ Navigator.pop(context);},
+                    child: Icon(
+                      IconData(58848,
+                          fontFamily: 'MaterialIcons',
+                          matchTextDirection: true),
+                      color: const Color(0xFF707070),
+                    ),
+                  ),
+                  Text(
+                    'Communities',
+                    style: Theme.of(context).textTheme.headline,
+                  ),
+                  Icon(
+                    const IconData(59389, fontFamily: 'MaterialIcons'),
+                    color: const Color(0xFF707070),
+                    size: 28.0,
+                  ),
+                ],
               ),
             ),
+
             Padding(
               padding: EdgeInsets.symmetric(horizontal: 20.0),
               child: ListView(

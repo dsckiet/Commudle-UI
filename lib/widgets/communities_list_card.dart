@@ -23,25 +23,45 @@ class _CommunitiesListCardState extends State<CommunitiesListCard> {
                   width: 40.0,
                   image: AssetImage('assets/images/temp-wtm.png'),
                 ),
-                Text(
-                  'WTM BVP',
-                  style: Theme.of(context).textTheme.title,
+                Container(
+                  padding: EdgeInsets.only(left: 12.0),
+                  child: Text(
+                    'WTM BVP',
+                    style: Theme.of(context).textTheme.title,
+                  ),
                 )
               ],
             ),
             Row(
-              mainAxisAlignment: MainAxisAlignment.spaceBetween,
-              children: <Widget>[
-                Text(
-                  'Events Count:8',
-                  style: Theme.of(context).textTheme.body1,
-                ),
-                Text(
-                  'Members:5',
-                  style: Theme.of(context).textTheme.body1,
-                )
-              ],
-            )
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                children: <Widget>[
+                  Row(
+                    children: <Widget>[
+                      Icon(
+                        const IconData(
+                            58900, fontFamily: 'MaterialIcons'),
+                        color: const Color(0xFF707070),
+                      ),
+                      Text(
+                        'Events Count: 8',
+                        style: Theme.of(context).textTheme.body1,
+                      ),
+                    ],
+                  ),
+                  Row(
+                    children: <Widget>[
+                      Icon(
+                        const IconData(59603,
+                            fontFamily: 'MaterialIcons'),
+                        color: const Color(0xFF707070),
+                      ),
+                      Text(
+                        'Members: 5',
+                        style: Theme.of(context).textTheme.body1,
+                      ),
+                    ],
+                  ),
+                ]),
           ],
         ),
       ),
