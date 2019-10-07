@@ -43,7 +43,7 @@ class _MemberCardState extends State<MemberCard> {
               mainAxisAlignment: MainAxisAlignment.spaceEvenly,
               children: <Widget>[
                 CircleAvatar(
-                  radius: 20.0,
+                  radius: 14.0,
                   child: Container(
                     padding: EdgeInsets.all(8.0),
                     child: Image(
@@ -52,7 +52,7 @@ class _MemberCardState extends State<MemberCard> {
                   ),
                 ),
                 CircleAvatar(
-                  radius: 20.0,
+                  radius: 14.0,
                   child: Container(
                     padding: EdgeInsets.all(4.0),
                     child: Image(
@@ -61,7 +61,7 @@ class _MemberCardState extends State<MemberCard> {
                   ),
                 ),
                 CircleAvatar(
-                  radius: 20.0,
+                  radius: 14.0,
                   child: Container(
                     padding: EdgeInsets.all(8.0),
                     child: Image(
