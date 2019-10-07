@@ -22,16 +22,16 @@ class _HomeScreenState extends State<HomeScreen> {
                 style: Theme.of(context).textTheme.title,
               ),
               GestureDetector(
-                    onTap: navigationPage,
-                    child: Text(
-                "See All",                                          
-                style: TextStyle(
-                    fontSize: 14.0,
-                    color: const Color(0xFFDB4437),
-                    fontWeight: FontWeight.w600),
-              ),
+                onTap: navigateToCommunitiesList,
+                child: Text(
+                  "See All",
+                  style: TextStyle(
+                      fontSize: 14.0,
+                      color: const Color(0xFFDB4437),
+                      fontWeight: FontWeight.w600),
+                ),
               )
-              ],
+            ],
           ),
         ),
         Padding(
@@ -73,20 +73,19 @@ class _HomeScreenState extends State<HomeScreen> {
                 style: Theme.of(context).textTheme.title,
               ),
               GestureDetector(
-                    onTap: navigationPage1,
-                    child: Text(
-                "Registered Events",
-                style: TextStyle(
-                    fontSize: 14.0,
-                    color: const Color(0xFF0F9D58),
-                    fontWeight: FontWeight.w600),
-              )
-              )
+                  onTap: navigateToRegisteredEventList,
+                  child: Text(
+                    "Registered Events",
+                    style: TextStyle(
+                        fontSize: 14.0,
+                        color: const Color(0xFF0F9D58),
+                        fontWeight: FontWeight.w600),
+                  ))
             ],
           ),
         ),
         Padding(
-          padding: EdgeInsets.only(left: 20.0, right: 20.0),
+          padding: EdgeInsets.only(left: 20.0, right: 20.0,),
           child: Container(
             child: ListView(
               physics: const NeverScrollableScrollPhysics(),
@@ -167,11 +166,11 @@ class _HomeScreenState extends State<HomeScreen> {
     );
   }
 
-  void navigationPage() {
-    Navigator.of(context).pushReplacementNamed('/CommunitiesListScreen');
-  }
-  void navigationPage1() {
-    Navigator.of(context).pushReplacementNamed('/RegisteredEventScreen');
+  void navigateToCommunitiesList() {
+    Navigator.of(context).pushNamed('/CommunitiesListScreen');
   }
 
+  void navigateToRegisteredEventList() {
+    Navigator.of(context).pushNamed('/RegisteredEventScreen');
+  }
 }
