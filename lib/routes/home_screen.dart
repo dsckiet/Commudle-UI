@@ -1,3 +1,5 @@
+import 'package:commudle/routes/communities_list_screen.dart';
+import 'package:commudle/routes/community_screen.dart';
 import 'package:commudle/widgets/community_card.dart';
 import 'package:commudle/widgets/next_event_card.dart';
 import 'package:commudle/widgets/event_card.dart';
@@ -47,7 +49,16 @@ class _HomeScreenState extends State<HomeScreen> {
                     Padding(
                       padding: EdgeInsets.only(left: 18.0),
                     ),
-                    CommunityCard(),
+                    InkWell(
+                      child: CommunityCard(),
+                      onTap: () {
+                        Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                              builder: (context) => CommunityScreen()),
+                        );
+                      },
+                    ),
                     CommunityCard(),
                     CommunityCard(),
                     CommunityCard(),
@@ -85,7 +96,10 @@ class _HomeScreenState extends State<HomeScreen> {
           ),
         ),
         Padding(
-          padding: EdgeInsets.only(left: 20.0, right: 20.0,),
+          padding: EdgeInsets.only(
+            left: 20.0,
+            right: 20.0,
+          ),
           child: Container(
             child: ListView(
               physics: const NeverScrollableScrollPhysics(),
@@ -137,43 +151,44 @@ class _HomeScreenState extends State<HomeScreen> {
   @override
   Widget build(BuildContext context) {
     return WillPopScope(
-      onWillPop: () {
-        return new Future.value(true);
-      },
-      child: Scaffold(
-      body: SingleChildScrollView(
-        child: Container(
-          child: Column(
-            crossAxisAlignment: CrossAxisAlignment.start,
-            children: <Widget>[
-              Padding(
-                padding: EdgeInsets.only(left: 20.0, top: 48.0, bottom: 16.0),
-                child: Text(
-                  "Home",
-                  style: Theme.of(context).textTheme.headline,
-                ),
+        onWillPop: () {
+          return new Future.value(true);
+        },
+        child: Scaffold(
+          body: SingleChildScrollView(
+            child: Container(
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: <Widget>[
+                  Padding(
+                    padding:
+                        EdgeInsets.only(left: 20.0, top: 48.0, bottom: 16.0),
+                    child: Text(
+                      "Home",
+                      style: Theme.of(context).textTheme.headline,
+                    ),
+                  ),
+                  Container(
+                    child: communitiesWidget(),
+                  ),
+                  Container(
+                    child: nextEventWidget(),
+                  ),
+                  Container(
+                    padding: EdgeInsets.symmetric(vertical: 20.0),
+                    child: upcomingEvents(),
+                  ),
+                ],
               ),
-              Container(
-                child: communitiesWidget(),
-              ),
-              Container(
-                child: nextEventWidget(),
-              ),
-              Container(
-                padding: EdgeInsets.symmetric(vertical: 20.0),
-                child: upcomingEvents(),
-              ),
-            ],
+            ),
           ),
-        ),
-      ),
-    )
-    );
+        ));
   }
 
   void navigationPage() {
     Navigator.pushNamed(context, '/CommunitiesListScreen');
   }
+
   void navigationPage1() {
     Navigator.pushNamed(context, '/RegisteredEventScreen');
   }
