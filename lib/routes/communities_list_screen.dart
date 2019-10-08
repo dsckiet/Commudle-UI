@@ -9,7 +9,11 @@ class CommunitiesListScreen extends StatefulWidget {
 class _CommunitiesListScreenState extends State<CommunitiesListScreen> {
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
+    return WillPopScope(
+      onWillPop: () {
+        return new Future.value(true);
+      },
+      child: Scaffold(
       body: SingleChildScrollView(
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
@@ -63,6 +67,7 @@ class _CommunitiesListScreenState extends State<CommunitiesListScreen> {
           ],
         ),
       ),
-    );
+    )
+  );
   }
 }
