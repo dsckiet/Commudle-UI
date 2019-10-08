@@ -200,16 +200,22 @@ class _CommunityScreenState extends State<CommunityScreen> {
               ),
             ),
           ),
-          Container(
+        ],
+      ),
+      bottomNavigationBar: Padding(
+        padding: EdgeInsets.only(bottom: 20,left: 20.0,right: 20.0),
+        child: BottomAppBar(
+
+          child: Container(
             padding: EdgeInsets.only(
-                top: 2.0, left: 32.0, right: 32.0, bottom: 16.0),
+                top: 8.0, left: 32.0, right: 32.0, bottom: 8.0),
             color: Colors.transparent,
             child: Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: <Widget>[
                 RaisedButton(
                     padding:
-                        EdgeInsets.symmetric(vertical: 12, horizontal: 16.0),
+                    EdgeInsets.symmetric(vertical: 12, horizontal: 16.0),
                     child: Text(
                       'Events',
                       style: TextStyle(
@@ -229,7 +235,7 @@ class _CommunityScreenState extends State<CommunityScreen> {
                     }),
                 RaisedButton(
                     padding:
-                        EdgeInsets.symmetric(vertical: 12, horizontal: 16.0),
+                    EdgeInsets.symmetric(vertical: 12, horizontal: 16.0),
                     child: Text(
                       'About',
                       style: TextStyle(
@@ -249,7 +255,7 @@ class _CommunityScreenState extends State<CommunityScreen> {
                     }),
                 RaisedButton(
                     padding:
-                        EdgeInsets.symmetric(vertical: 12, horizontal: 16.0),
+                    EdgeInsets.symmetric(vertical: 12, horizontal: 16.0),
                     child: Text(
                       'Team',
                       style: TextStyle(
@@ -270,7 +276,8 @@ class _CommunityScreenState extends State<CommunityScreen> {
               ],
             ),
           ),
-        ],
+
+        ),
       ),
     );
   }
