@@ -31,7 +31,7 @@ class _CommunityScreenState extends State<CommunityScreen> {
                         mainAxisAlignment: MainAxisAlignment.spaceBetween,
                         children: <Widget>[
                           InkWell(
-                            onTap:(){ Navigator.pop(context);},
+                            onTap:(){Navigator.pop(context);},
                             child: Icon(
                               IconData(58848,
                                   fontFamily: 'MaterialIcons',
@@ -91,88 +91,6 @@ class _CommunityScreenState extends State<CommunityScreen> {
                             ],
                           ),
                         ]),
-//              Row(
-//                mainAxisAlignment: MainAxisAlignment.spaceBetween,
-//                children: <Widget>[
-//                  Card(
-//                    shape: RoundedRectangleBorder(
-//                        borderRadius: BorderRadius.all(Radius.circular(8.0))),
-//                    color: const Color(0xFF4285F4),
-//                    child: Container(
-//                      width: MediaQuery.of(context).size.width * .40,
-//                      padding: EdgeInsets.all(16.0),
-//                      child: Column(
-//                        crossAxisAlignment: CrossAxisAlignment.start,
-//                        children: <Widget>[
-//                          Row(children: <Widget>[
-//                            Icon(
-//                                const IconData(58900, fontFamily: 'MaterialIcons'),
-//                              color: Colors.white,
-//                            ),
-//                            Container(
-//                              padding: EdgeInsets.only(left: 12.0),
-//                              child: Text(
-//                                '08',
-//                                style: TextStyle(
-//                                    fontSize: 24.0,
-//                                    color: Colors.white,
-//                                    fontFamily: 'Monsterrat'),
-//                              ),
-//                            ),
-//                          ]),
-//                          Text(
-//                            'Total Events',
-//                            style: TextStyle(
-//                                fontSize: 16.0,
-//                                color: Colors.white,
-//                                fontFamily: 'Monsterrat'),
-//                          )
-//                        ],
-//                      ),
-//                    ),
-//                  ),
-//                  Card(
-//                    shape: RoundedRectangleBorder(
-//                        borderRadius: BorderRadius.all(Radius.circular(8.0))),
-//                    color: const Color(0xFF4285F4),
-//                    child: Container(
-//                      width: MediaQuery.of(context).size.width * .40,
-//                      padding: EdgeInsets.all(16.0),
-//                      child: Column(
-//                        crossAxisAlignment: CrossAxisAlignment.start,
-//                        children: <Widget>[
-//                          Row(
-//                            children: <Widget>[
-//                              Icon(
-//                                const IconData(58900, fontFamily: 'MaterialIcons'),
-//                                color: Colors.white,
-//                              ),
-//                              Container(
-//                                padding: EdgeInsets.only(left: 12.0),
-//                                child: Text(
-//                                  '05',
-//                                  style: TextStyle(
-//                                      fontSize: 24.0,
-//                                      color: Colors.white,
-//                                      fontFamily: 'Monsterrat'),
-//                                ),
-//                              ),
-//                            ],
-//                          ),
-//                          Text(
-//                            'Members',
-//                            style: TextStyle(
-//                                fontSize: 16.0,
-//                                color: Colors.white,
-//                                fontFamily: 'Monsterrat'),
-//                          )
-//                        ],
-//                      ),
-//                    ),
-//                  )
-//                ],
-//              ),
-
                     Container(
                       padding: EdgeInsets.only(top: 20.0),
                       child: Text(
@@ -276,7 +194,6 @@ class _CommunityScreenState extends State<CommunityScreen> {
               ],
             ),
           ),
-
         ),
       ),
     );

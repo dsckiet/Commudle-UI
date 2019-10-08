@@ -73,7 +73,7 @@ class _HomeScreenState extends State<HomeScreen> {
                 style: Theme.of(context).textTheme.title,
               ),
               GestureDetector(
-                  onTap: navigationPage,
+                  onTap: navigationPage1,
                   child: Text(
                     "Registered Events",
                     style: TextStyle(
