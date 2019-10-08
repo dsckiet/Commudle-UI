@@ -22,16 +22,16 @@ class _HomeScreenState extends State<HomeScreen> {
                 style: Theme.of(context).textTheme.title,
               ),
               GestureDetector(
-                    onTap: navigationPage,
-                    child: Text(
-                "See All",                                          
-                style: TextStyle(
-                    fontSize: 14.0,
-                    color: const Color(0xFFDB4437),
-                    fontWeight: FontWeight.w600),
-              ),
+                onTap: navigationPage,
+                child: Text(
+                  "See All",
+                  style: TextStyle(
+                      fontSize: 14.0,
+                      color: const Color(0xFFDB4437),
+                      fontWeight: FontWeight.w600),
+                ),
               )
-              ],
+            ],
           ),
         ),
         Padding(
@@ -73,20 +73,19 @@ class _HomeScreenState extends State<HomeScreen> {
                 style: Theme.of(context).textTheme.title,
               ),
               GestureDetector(
-                    onTap: navigationPage1,
-                    child: Text(
-                "Registered Events",
-                style: TextStyle(
-                    fontSize: 14.0,
-                    color: const Color(0xFF0F9D58),
-                    fontWeight: FontWeight.w600),
-              )
-              )
+                  onTap: navigationPage,
+                  child: Text(
+                    "Registered Events",
+                    style: TextStyle(
+                        fontSize: 14.0,
+                        color: const Color(0xFF0F9D58),
+                        fontWeight: FontWeight.w600),
+                  ))
             ],
           ),
         ),
         Padding(
-          padding: EdgeInsets.only(left: 20.0, right: 20.0),
+          padding: EdgeInsets.only(left: 20.0, right: 20.0,),
           child: Container(
             child: ListView(
               physics: const NeverScrollableScrollPhysics(),
@@ -170,34 +169,6 @@ class _HomeScreenState extends State<HomeScreen> {
       ),
     )
     );
-    // return Scaffold(
-    //   body: SingleChildScrollView(
-    //     child: Container(
-    //       child: Column(
-    //         crossAxisAlignment: CrossAxisAlignment.start,
-    //         children: <Widget>[
-    //           Padding(
-    //             padding: EdgeInsets.only(left: 20.0, top: 48.0, bottom: 16.0),
-    //             child: Text(
-    //               "Home",
-    //               style: Theme.of(context).textTheme.headline,
-    //             ),
-    //           ),
-    //           Container(
-    //             child: communitiesWidget(),
-    //           ),
-    //           Container(
-    //             child: nextEventWidget(),
-    //           ),
-    //           Container(
-    //             padding: EdgeInsets.symmetric(vertical: 20.0),
-    //             child: upcomingEvents(),
-    //           ),
-    //         ],
-    //       ),
-    //     ),
-    //   ),
-    // );
   }
 
   void navigationPage() {
@@ -206,5 +177,4 @@ class _HomeScreenState extends State<HomeScreen> {
   void navigationPage1() {
     Navigator.pushNamed(context, '/RegisteredEventScreen');
   }
-
 }

@@ -26,20 +26,8 @@ class _EventCardState extends State<EventCard> {
           ),
           // ),
         ),
-        ClipRRect(
-          borderRadius: BorderRadius.all(Radius.circular(8.0)),
-          child: Container(
-            child: DecoratedBox(
-              decoration: BoxDecoration(
-                gradient: LinearGradient(
-                    begin: Alignment.topCenter,
-                    end: Alignment.bottomCenter,
-                    colors: [const Color(0x33000000), const Color(0xFF545454)]),
-              ),
-            ),
-          ),
-        ),
         Container(
+          color: Colors.black45,
           padding: EdgeInsets.only(
             left: 12.0,
           ),
