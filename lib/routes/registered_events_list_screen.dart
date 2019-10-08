@@ -1,3 +1,4 @@
+import 'package:commudle/routes/registered_event_screen.dart';
 import 'package:commudle/widgets/event_card.dart';
 import 'package:flutter/material.dart';
 
@@ -47,7 +48,11 @@ class _RegisteredEventsListState extends State<RegisteredEventsList> {
                   physics: const NeverScrollableScrollPhysics(),
                   shrinkWrap: true,
                   children: <Widget>[
-                    EventCard(),
+                    InkWell(onTap: (){ Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                          builder: (context) =>RegisteredEvent()),
+                    );},child: EventCard()),
                     EventCard(),
                     EventCard(),
                     EventCard(),
