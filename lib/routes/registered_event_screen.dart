@@ -9,7 +9,11 @@ class RegisteredEvent extends StatefulWidget {
 class _RegisteredEventState extends State<RegisteredEvent> {
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
+    return WillPopScope(
+      onWillPop: () {
+        return new Future.value(true);
+      },
+      child: Scaffold(
       body: SingleChildScrollView(
         child: Container(
           child: Column(
@@ -68,6 +72,7 @@ class _RegisteredEventState extends State<RegisteredEvent> {
           ),
         ),
       ),
+    )
     );
   }
 }

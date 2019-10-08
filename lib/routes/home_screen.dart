@@ -137,7 +137,11 @@ class _HomeScreenState extends State<HomeScreen> {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
+    return WillPopScope(
+      onWillPop: () {
+        return new Future.value(true);
+      },
+      child: Scaffold(
       body: SingleChildScrollView(
         child: Container(
           child: Column(
@@ -164,14 +168,43 @@ class _HomeScreenState extends State<HomeScreen> {
           ),
         ),
       ),
+    )
     );
+    // return Scaffold(
+    //   body: SingleChildScrollView(
+    //     child: Container(
+    //       child: Column(
+    //         crossAxisAlignment: CrossAxisAlignment.start,
+    //         children: <Widget>[
+    //           Padding(
+    //             padding: EdgeInsets.only(left: 20.0, top: 48.0, bottom: 16.0),
+    //             child: Text(
+    //               "Home",
+    //               style: Theme.of(context).textTheme.headline,
+    //             ),
+    //           ),
+    //           Container(
+    //             child: communitiesWidget(),
+    //           ),
+    //           Container(
+    //             child: nextEventWidget(),
+    //           ),
+    //           Container(
+    //             padding: EdgeInsets.symmetric(vertical: 20.0),
+    //             child: upcomingEvents(),
+    //           ),
+    //         ],
+    //       ),
+    //     ),
+    //   ),
+    // );
   }
 
   void navigationPage() {
-    Navigator.of(context).pushReplacementNamed('/CommunitiesListScreen');
+    Navigator.pushNamed(context, '/CommunitiesListScreen');
   }
   void navigationPage1() {
-    Navigator.of(context).pushReplacementNamed('/RegisteredEventScreen');
+    Navigator.pushNamed(context, '/RegisteredEventScreen');
   }
 
 }
