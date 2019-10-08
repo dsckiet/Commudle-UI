@@ -13,7 +13,7 @@ class _CommunitiesListCardState extends State<CommunitiesListCard> {
           borderRadius: BorderRadius.all(Radius.circular(8.0))),
       color: const Color(0xFFF9F9F9),
       child: Container(
-        padding: EdgeInsets.symmetric(horizontal: 16.0,vertical: 8.0),
+        padding: EdgeInsets.symmetric(horizontal: 12.0,vertical: 8.0),
         child: Column(
           children: <Widget>[
             Row(
@@ -32,36 +32,39 @@ class _CommunitiesListCardState extends State<CommunitiesListCard> {
                 )
               ],
             ),
-            Row(
-                mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                children: <Widget>[
-                  Row(
-                    children: <Widget>[
-                      Icon(
-                        const IconData(
-                            58900, fontFamily: 'MaterialIcons'),
-                        color: const Color(0xFF707070),
-                      ),
-                      Text(
-                        'Events Count: 8',
-                        style: Theme.of(context).textTheme.body1,
-                      ),
-                    ],
-                  ),
-                  Row(
-                    children: <Widget>[
-                      Icon(
-                        const IconData(59603,
-                            fontFamily: 'MaterialIcons'),
-                        color: const Color(0xFF707070),
-                      ),
-                      Text(
-                        'Members: 5',
-                        style: Theme.of(context).textTheme.body1,
-                      ),
-                    ],
-                  ),
-                ]),
+            Container(
+              padding: EdgeInsets.only(top: 12.0),
+              child: Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  children: <Widget>[
+                    Row(
+                      children: <Widget>[
+                        Icon(
+                          const IconData(
+                              58900, fontFamily: 'MaterialIcons'),
+                          color: const Color(0xFF707070),
+                        ),
+                        Text(
+                          'Events Count: 8',
+                          style: Theme.of(context).textTheme.body1,
+                        ),
+                      ],
+                    ),
+                    Row(
+                      children: <Widget>[
+                        Icon(
+                          const IconData(59603,
+                              fontFamily: 'MaterialIcons'),
+                          color: const Color(0xFF707070),
+                        ),
+                        Text(
+                          'Members: 5',
+                          style: Theme.of(context).textTheme.body1,
+                        ),
+                      ],
+                    ),
+                  ]),
+            ),
           ],
         ),
       ),
