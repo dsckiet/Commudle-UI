@@ -59,6 +59,7 @@ class _IntroScreenState extends State<IntroScreen> {
   }
 
   void navigationPage() {
+    // Navigator.pushNamed(context, '/AuthScreen');
     Navigator.of(context).pushReplacementNamed('/AuthScreen');
   }
 }

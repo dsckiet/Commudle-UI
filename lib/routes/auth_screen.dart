@@ -77,6 +77,7 @@ class _AuthScreenState extends State<AuthScreen> {
     );
   }
   void navigationPage() {
-    Navigator.of(context).pushReplacementNamed('/HomeScreen');
+    Navigator.pushNamed(context, '/HomeScreen');
+    //Navigator.of(context).pushReplacementNamed('/HomeScreen');
   }
 }

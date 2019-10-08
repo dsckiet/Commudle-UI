@@ -22,7 +22,7 @@ class _HomeScreenState extends State<HomeScreen> {
                 style: Theme.of(context).textTheme.title,
               ),
               GestureDetector(
-                onTap: navigateToCommunitiesList,
+                onTap: navigationPage,
                 child: Text(
                   "See All",
                   style: TextStyle(
@@ -73,7 +73,7 @@ class _HomeScreenState extends State<HomeScreen> {
                 style: Theme.of(context).textTheme.title,
               ),
               GestureDetector(
-                  onTap: navigateToRegisteredEventList,
+                  onTap: navigationPage1,
                   child: Text(
                     "Registered Events",
                     style: TextStyle(
@@ -136,7 +136,11 @@ class _HomeScreenState extends State<HomeScreen> {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
+    return WillPopScope(
+      onWillPop: () {
+        return new Future.value(true);
+      },
+      child: Scaffold(
       body: SingleChildScrollView(
         child: Container(
           child: Column(
@@ -163,14 +167,14 @@ class _HomeScreenState extends State<HomeScreen> {
           ),
         ),
       ),
+    )
     );
   }
 
-  void navigateToCommunitiesList() {
-    Navigator.of(context).pushNamed('/CommunitiesListScreen');
+  void navigationPage() {
+    Navigator.pushNamed(context, '/CommunitiesListScreen');
   }
-
-  void navigateToRegisteredEventList() {
-    Navigator.of(context).pushNamed('/RegisteredEventScreen');
+  void navigationPage1() {
+    Navigator.pushNamed(context, '/RegisteredEventScreen');
   }
 }
