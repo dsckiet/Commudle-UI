@@ -186,7 +186,7 @@ class _CommunityScreenState extends State<CommunityScreen> {
                           ),
                         ),
                         Container(
-                          padding: EdgeInsets.only(bottom: 20.0),
+                          padding: EdgeInsets.only(bottom: 100.0),
                           child: ListView(
                             physics: const NeverScrollableScrollPhysics(),
                             shrinkWrap: true,
@@ -211,23 +211,23 @@ class _CommunityScreenState extends State<CommunityScreen> {
             alignment: Alignment.bottomCenter,
             child: ClipRRect(
               borderRadius: BorderRadius.only(
-                topLeft: Radius.circular(15.0),
-                topRight: Radius.circular(15.0),
-                bottomLeft: Radius.circular(15.0),
-                bottomRight: Radius.circular(15.0),
+                topLeft: Radius.circular(8.0),
+                topRight: Radius.circular(8.0),
+                bottomLeft: Radius.circular(8.0),
+                bottomRight: Radius.circular(8.0),
               ),
               child: Container(
                 //height: 70,
                 padding: EdgeInsets.only(bottom: 20, left: 20.0, right: 20.0),
                 child: ClipRRect(
                   borderRadius: BorderRadius.only(
-                    topLeft: Radius.circular(15.0),
-                    topRight: Radius.circular(15.0),
-                    bottomLeft: Radius.circular(15.0),
-                    bottomRight: Radius.circular(15.0),
+                    topLeft: Radius.circular(8.0),
+                    topRight: Radius.circular(8.0),
+                    bottomLeft: Radius.circular(8.0),
+                    bottomRight: Radius.circular(8.0),
                   ),
                   child: Container(
-                    color: Colors.white,
+                    color: Color(0xFF263238),
                     height: 50,
                     padding:
                         EdgeInsets.only(left: 8.0, right: 8.0, bottom: 8.0),
@@ -244,6 +244,7 @@ class _CommunityScreenState extends State<CommunityScreen> {
                                 color: Colors.black54,
                                 icon: Icon(
                                   Icons.calendar_today,
+                                  color: const Color(0xFFF1F1F1),
                                 ),
                                 onPressed: () {
                                   Navigator.push(
@@ -258,7 +259,7 @@ class _CommunityScreenState extends State<CommunityScreen> {
                                 style: TextStyle(
                                   fontSize: 14,
                                   fontWeight: FontWeight.bold,
-                                  color: Colors.black54,
+                                  color: const Color(0xFFF1F1F1),
                                 ),
                               ),
                             ],
@@ -273,6 +274,8 @@ class _CommunityScreenState extends State<CommunityScreen> {
                                 color: Colors.black54,
                                 icon: Icon(
                                   Icons.info_outline,
+                                  color: const Color(0xFFF1F1F1),
+
                                 ),
                                 onPressed: () {
                                   Navigator.push(
@@ -287,7 +290,7 @@ class _CommunityScreenState extends State<CommunityScreen> {
                                 style: TextStyle(
                                   fontSize: 14.0,
                                   fontWeight: FontWeight.bold,
-                                  color: Colors.black54,
+                                  color: const Color(0xFFF1F1F1),
                                 ),
                               ),
                             ],
@@ -302,6 +305,8 @@ class _CommunityScreenState extends State<CommunityScreen> {
                                 color: Colors.black54,
                                 icon: Icon(
                                   Icons.contacts,
+                                  color: const Color(0xFFF1F1F1),
+
                                 ),
                                 onPressed: () {
                                   Navigator.push(
@@ -316,7 +321,7 @@ class _CommunityScreenState extends State<CommunityScreen> {
                                 style: TextStyle(
                                   fontSize: 14.0,
                                   fontWeight: FontWeight.bold,
-                                  color: Colors.black54,
+                                  color: const Color(0xFFF1F1F1),
                                 ),
                               ),
                             ],
