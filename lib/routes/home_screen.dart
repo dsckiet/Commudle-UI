@@ -158,14 +158,26 @@ class _HomeScreenState extends State<HomeScreen> {
           body: SingleChildScrollView(
             child: Container(
               child: Column(
-                crossAxisAlignment: CrossAxisAlignment.start,
+                crossAxisAlignment: CrossAxisAlignment.center,
                 children: <Widget>[
                   Padding(
-                    padding:
-                        EdgeInsets.only(left: 20.0, top: 48.0, bottom: 16.0),
-                    child: Text(
-                      "Home",
-                      style: Theme.of(context).textTheme.headline,
+                    padding: EdgeInsets.only(
+                        left: 20.0, top: 48.0, bottom: 16.0, right: 20.0),
+                    child: Row(
+                      children: <Widget>[
+                        Expanded(
+                          child: Text(
+                            "Home",
+                            style: Theme.of(context).textTheme.headline,
+                            textAlign: TextAlign.center,
+                          ),
+                        ),
+                        Icon(
+                          const IconData(59389, fontFamily: 'MaterialIcons'),
+                          color: const Color(0xFF707070),
+                          size: 28.0,
+                        ),
+                      ],
                     ),
                   ),
                   Container(
