@@ -21,39 +21,42 @@ class _NextEventCardState extends State<NextEventCard> {
               width: MediaQuery.of(context).size.width * 0.25,
             ),
           ),
-          Container(
-            padding: EdgeInsets.only(left: 16.0),
+          SizedBox(width: 16,),
+          // Container(
+          //   padding: EdgeInsets.only(left: 16.0),
             // height: 100,
-            child: Column(
-              mainAxisAlignment: MainAxisAlignment.center,
-              crossAxisAlignment: CrossAxisAlignment.start,
-              children: <Widget>[
-                Text(
-                  "DSC KIET",
-                  style: TextStyle(
-                      fontSize: 14.0,
-                      fontWeight: FontWeight.w600,
-                      color: const Color(0xFF707070)),
-                ),
-                Container(
-                  child: Text(
-                    '''DEV iO - Kickstart to Developer Career''',
-                  style: Theme.of(context).textTheme.body1,
-                  ),
-                ),
-                Padding(
-                  padding: EdgeInsets.only(top: 16.0),
-                  child: Text(
-                    "Sept 5, 10:00 AM - KIET Gzb",
+           // child: 
+            Flexible(
+              child: Column(
+                // mainAxisSize: MainAxisSize.min,
+                mainAxisAlignment: MainAxisAlignment.center,
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: <Widget>[
+                  Text(
+                    "DSC KIET",
                     style: TextStyle(
                         fontSize: 14.0,
                         fontWeight: FontWeight.w600,
                         color: const Color(0xFF707070)),
                   ),
-                )
-              ],
+                  Text(
+                    '''DEV iO - Kickstart to Developer Career''',
+                    style: Theme.of(context).textTheme.body1,
+                  ),
+                  Padding(
+                    padding: EdgeInsets.only(top: 16.0),
+                    child: Text(
+                      "Sept 5, 10:00 AM - KIET Gzb",
+                      style: TextStyle(
+                          fontSize: 14.0,
+                          fontWeight: FontWeight.w600,
+                          color: const Color(0xFF707070)),
+                    ),
+                  )
+                ],
+              ),
             ),
-          ),
+        //  ),
         ],
       ),
       // ),
