@@ -1,10 +1,6 @@
-import 'package:commudle/routes/about_screen.dart';
-import 'package:commudle/routes/community_screen.dart';
-import 'package:commudle/routes/events_screen.dart';
 import 'package:commudle/routes/network_error_page.dart';
-import 'package:commudle/routes/profile_screen.dart';
 import 'package:commudle/routes/registered_events_list_screen.dart';
-import 'package:commudle/routes/team_screen.dart';
+import 'package:commudle/routes/schedule_page.dart';
 import 'package:flutter/material.dart';
 
 import 'package:commudle/routes/splash_screen.dart';
@@ -12,8 +8,6 @@ import 'package:commudle/routes/intro_screen.dart';
 import 'package:commudle/routes/auth_screen.dart';
 import 'package:commudle/routes/communities_list_screen.dart';
 import 'package:commudle/routes/home_screen.dart';
-
-import 'package:commudle/routes/registered_event_screen.dart';
 
 void main() => runApp(MyApp());
 
@@ -23,8 +17,8 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       title: "Commudle",
       theme: ThemeData(
-          primaryColor: const Color(0xFF4285F4),
-          textTheme: ThemeData.dark().textTheme.copyWith(
+        primaryColor: const Color(0xFF4285F4),
+        textTheme: ThemeData.dark().textTheme.copyWith(
               headline: TextStyle(
                 fontSize: 24,
                 fontFamily: 'Montserrat',
@@ -44,19 +38,25 @@ class MyApp extends StatelessWidget {
                 color: const Color(0xFF707070),
               ),
               body2: TextStyle(
-                  fontSize: 14.0,
-                  fontFamily: 'Montserrat',
-                  fontWeight: FontWeight.w600,
-                  color: const Color(0xFF707070)))),
+                fontSize: 14.0,
+                fontFamily: 'Montserrat',
+                fontWeight: FontWeight.w600,
+                color: const Color(0xFF707070),
+              ),
+            ),
+      ),
       debugShowCheckedModeBanner: false,
-      home: SplashScreen(),
+      home: SchedulePage(),
       routes: <String, WidgetBuilder>{
         '/IntroScreen': (BuildContext context) => IntroScreen(),
         '/AuthScreen': (BuildContext context) => AuthScreen(),
         '/HomeScreen': (BuildContext context) => HomeScreen(),
-        '/CommunitiesListScreen': (BuildContext context) => CommunitiesListScreen(),
-        '/RegisteredEventScreen': (BuildContext context) => RegisteredEventsList(),
+        '/CommunitiesListScreen': (BuildContext context) =>
+            CommunitiesListScreen(),
+        '/RegisteredEventScreen': (BuildContext context) =>
+            RegisteredEventsList(),
         '/NetworkError': (BuildContext context) => NetworkErrorPage(),
+        '/SchedulePage': (BuildContext context) => SchedulePage(),
       },
     );
   }

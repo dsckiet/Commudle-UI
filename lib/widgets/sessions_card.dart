@@ -36,11 +36,11 @@ class _SessionsCardState extends State<SessionsCard> {
                       children: <Widget>[
                         Text(
                           'Arpan Garg',
-                          style: Theme.of(context).textTheme.body2 ,
+                          style: Theme.of(context).textTheme.body2,
                         ),
                         Text(
                           'Lead GDG ND',
-                          style: Theme.of(context).textTheme.body2 ,
+                          style: Theme.of(context).textTheme.body2,
                         )
                       ],
                     ),

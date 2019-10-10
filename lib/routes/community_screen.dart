@@ -50,11 +50,12 @@ class _CommunityScreenState extends State<CommunityScreen> {
                               ),
                               InkWell(
                                 child: Icon(
-                                  const IconData(59389, fontFamily: 'MaterialIcons'),
+                                  const IconData(59389,
+                                      fontFamily: 'MaterialIcons'),
                                   color: const Color(0xFF707070),
                                   size: 28.0,
                                 ),
-                                onTap: (){
+                                onTap: () {
                                   Navigator.push(
                                     context,
                                     MaterialPageRoute(

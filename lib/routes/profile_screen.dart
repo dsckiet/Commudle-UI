@@ -1,4 +1,3 @@
-import 'package:commudle/routes/network_error_page.dart';
 import 'package:flutter/material.dart';
 
 class ProfileScreen extends StatefulWidget {
@@ -154,10 +153,8 @@ class _ProfileScreenState extends State<ProfileScreen> {
       ),
     );
   }
-  void networkErrorPage() {
 
+  void networkErrorPage() {
     Navigator.of(context).pushNamed('/NetworkError');
   }
-  
-
 }
