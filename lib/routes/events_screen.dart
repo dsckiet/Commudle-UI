@@ -23,7 +23,9 @@ class _EventsScreenState extends State<EventsScreen> {
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: <Widget>[
                     InkWell(
-                      onTap:(){ Navigator.pop(context);},
+                      onTap: () {
+                        Navigator.pop(context);
+                      },
                       child: Icon(
                         IconData(58848,
                             fontFamily: 'MaterialIcons',
@@ -41,7 +43,7 @@ class _EventsScreenState extends State<EventsScreen> {
                         color: const Color(0xFF707070),
                         size: 28.0,
                       ),
-                      onTap: (){
+                      onTap: () {
                         Navigator.push(
                           context,
                           MaterialPageRoute(

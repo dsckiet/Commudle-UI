@@ -26,7 +26,8 @@ class _IntroScreenState extends State<IntroScreen> {
                 color: const Color(0xFF707070),
               ),
             ),
-            Padding(padding: EdgeInsets.all(32.0),
+            Padding(
+              padding: EdgeInsets.all(32.0),
               child: Text(
                 "A community platform that helps communities to grow.",
                 style: Theme.of(context).textTheme.title,
@@ -36,20 +37,21 @@ class _IntroScreenState extends State<IntroScreen> {
             Padding(padding: EdgeInsets.only(top: 32.0)),
             FittedBox(
               child: RaisedButton(
-                  padding: EdgeInsets.symmetric(vertical: 12, horizontal: 48),
-                  child: Text(
-                    "Get Started",
-                    style: TextStyle(
-                      fontSize: 20.0,
-                      fontWeight: FontWeight.bold,
-                      color: const Color(0xFF4285F4),
-                    ),
+                padding: EdgeInsets.symmetric(vertical: 12, horizontal: 48),
+                child: Text(
+                  "Get Started",
+                  style: TextStyle(
+                    fontSize: 20.0,
+                    fontWeight: FontWeight.bold,
+                    color: const Color(0xFF4285F4),
                   ),
-                  color: const Color(0xFFF9F9F9),
-                  shape: RoundedRectangleBorder(borderRadius: new BorderRadius.circular(8.0)),
-                  onPressed: (){
-                    navigationPage();
-                  }
+                ),
+                color: const Color(0xFFF9F9F9),
+                shape: RoundedRectangleBorder(
+                    borderRadius: new BorderRadius.circular(8.0)),
+                onPressed: () {
+                  navigationPage();
+                },
               ),
             )
           ],

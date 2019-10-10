@@ -17,16 +17,19 @@ class _TeamScreenState extends State<TeamScreen> {
             crossAxisAlignment: CrossAxisAlignment.start,
             children: <Widget>[
               Container(
-                padding: EdgeInsets.only(left: 16.0, top: 48.0, bottom: 16.0,right: 16.0),
+                padding: EdgeInsets.only(
+                    left: 16.0, top: 48.0, bottom: 16.0, right: 16.0),
                 child: Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: <Widget>[
                     InkWell(
-                      onTap:(){ Navigator.pop(context);},
+                      onTap: () {
+                        Navigator.pop(context);
+                      },
                       child: Icon(
-                        IconData(
-                            58848, fontFamily: 'MaterialIcons', matchTextDirection: true
-                        ),
+                        IconData(58848,
+                            fontFamily: 'MaterialIcons',
+                            matchTextDirection: true),
                         color: const Color(0xFF707070),
                       ),
                     ),
@@ -40,7 +43,7 @@ class _TeamScreenState extends State<TeamScreen> {
                         color: const Color(0xFF707070),
                         size: 28.0,
                       ),
-                      onTap: (){
+                      onTap: () {
                         Navigator.push(
                           context,
                           MaterialPageRoute(
@@ -51,7 +54,6 @@ class _TeamScreenState extends State<TeamScreen> {
                   ],
                 ),
               ),
-
               Container(
                 padding: EdgeInsets.only(
                   left: 20.0,
@@ -82,7 +84,8 @@ class _TeamScreenState extends State<TeamScreen> {
                   crossAxisCount: 2,
                   mainAxisSpacing: 4.0,
                   crossAxisSpacing: 4.0,
-                  childAspectRatio: (MediaQuery.of(context).size.width/3.3) / (MediaQuery.of(context).size.height/4.2),
+                  childAspectRatio: (MediaQuery.of(context).size.width / 3.3) /
+                      (MediaQuery.of(context).size.height / 4.2),
                   shrinkWrap: true,
                   children: <Widget>[
                     MemberCard(),
@@ -109,7 +112,8 @@ class _TeamScreenState extends State<TeamScreen> {
                   mainAxisSpacing: 4.0,
                   crossAxisSpacing: 4.0,
                   shrinkWrap: true,
-                  childAspectRatio: (MediaQuery.of(context).size.width/3.3) / (MediaQuery.of(context).size.height/4.4),
+                  childAspectRatio: (MediaQuery.of(context).size.width / 3.3) /
+                      (MediaQuery.of(context).size.height / 4.4),
                   children: <Widget>[
                     MemberCard(),
                     MemberCard(),

@@ -13,7 +13,10 @@ class _CommunityCardState extends State<CommunityCard> {
         padding: EdgeInsets.only(bottom: 8, left: 2, right: 2),
         child: Card(
           shape: RoundedRectangleBorder(
-              borderRadius: BorderRadius.all(Radius.circular(8.0))),
+            borderRadius: BorderRadius.all(
+              Radius.circular(8.0),
+            ),
+          ),
           color: const Color(0xFFF9F9F9),
           elevation: 6.0,
           child: Padding(
@@ -42,4 +45,4 @@ class _CommunityCardState extends State<CommunityCard> {
       ),
     );
   }
-} 
+}

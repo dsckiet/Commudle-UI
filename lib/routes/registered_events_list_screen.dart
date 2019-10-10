@@ -18,16 +18,19 @@ class _RegisteredEventsListState extends State<RegisteredEventsList> {
             crossAxisAlignment: CrossAxisAlignment.start,
             children: <Widget>[
               Container(
-                padding: EdgeInsets.only(left: 16.0, top: 48.0, bottom: 16.0,right: 16.0),
+                padding: EdgeInsets.only(
+                    left: 16.0, top: 48.0, bottom: 16.0, right: 16.0),
                 child: Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: <Widget>[
                     InkWell(
-                      onTap:(){ Navigator.pop(context);},
+                      onTap: () {
+                        Navigator.pop(context);
+                      },
                       child: Icon(
-                        IconData(
-                            58848, fontFamily: 'MaterialIcons', matchTextDirection: true
-                        ),
+                        IconData(58848,
+                            fontFamily: 'MaterialIcons',
+                            matchTextDirection: true),
                         color: const Color(0xFF707070),
                       ),
                     ),
@@ -41,7 +44,7 @@ class _RegisteredEventsListState extends State<RegisteredEventsList> {
                         color: const Color(0xFF707070),
                         size: 28.0,
                       ),
-                      onTap: (){
+                      onTap: () {
                         Navigator.push(
                           context,
                           MaterialPageRoute(
@@ -53,16 +56,20 @@ class _RegisteredEventsListState extends State<RegisteredEventsList> {
                 ),
               ),
               Container(
-                padding: EdgeInsets.only(left: 20.0,right: 20.0,bottom: 20.0),
+                padding: EdgeInsets.only(left: 20.0, right: 20.0, bottom: 20.0),
                 child: ListView(
                   physics: const NeverScrollableScrollPhysics(),
                   shrinkWrap: true,
                   children: <Widget>[
-                    InkWell(onTap: (){ Navigator.push(
-                      context,
-                      MaterialPageRoute(
-                          builder: (context) =>RegisteredEvent()),
-                    );},child: EventCard()),
+                    InkWell(
+                        onTap: () {
+                          Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                                builder: (context) => RegisteredEvent()),
+                          );
+                        },
+                        child: EventCard()),
                     EventCard(),
                     EventCard(),
                     EventCard(),

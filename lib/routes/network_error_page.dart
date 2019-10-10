@@ -22,12 +22,11 @@ class NetworkErrorPage extends StatelessWidget {
               Text(
                 "Oops!",
                 style: TextStyle(
-                fontSize: 30.0,
-                fontFamily: 'Montserrat',
-                fontWeight: FontWeight.w400,
-                color: const Color(0xFF707070),
-                
-              ),
+                  fontSize: 30.0,
+                  fontFamily: 'Montserrat',
+                  fontWeight: FontWeight.w400,
+                  color: const Color(0xFF707070),
+                ),
                 textAlign: TextAlign.center,
               ),
               SizedBox(
@@ -36,18 +35,19 @@ class NetworkErrorPage extends StatelessWidget {
               Text(
                 "No internet connection",
                 style: TextStyle(
-                fontSize: 20.0,
-                fontFamily: 'Montserrat',
-                fontWeight: FontWeight.w500,
-                color: const Color(0xFF707070),
-                
-              ),
+                  fontSize: 20.0,
+                  fontFamily: 'Montserrat',
+                  fontWeight: FontWeight.w500,
+                  color: const Color(0xFF707070),
+                ),
                 textAlign: TextAlign.center,
               ),
-              SizedBox(height: 40,),
+              SizedBox(
+                height: 40,
+              ),
               Container(
                 padding: EdgeInsets.only(top: 28.0, bottom: 20.0),
-                width: MediaQuery.of(context).size.width*.70,
+                width: MediaQuery.of(context).size.width * .70,
                 child: RaisedButton(
                   shape: RoundedRectangleBorder(
                       borderRadius: BorderRadius.circular(22.0)),
