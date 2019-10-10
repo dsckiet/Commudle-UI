@@ -1,5 +1,6 @@
 import 'package:commudle/routes/about_screen.dart';
 import 'package:commudle/routes/events_screen.dart';
+import 'package:commudle/routes/profile_screen.dart';
 import 'package:commudle/routes/team_screen.dart';
 import 'package:commudle/widgets/sessions_card.dart';
 import 'package:flutter/material.dart';
@@ -47,11 +48,19 @@ class _CommunityScreenState extends State<CommunityScreen> {
                                 'Community Details',
                                 style: Theme.of(context).textTheme.headline,
                               ),
-                              Icon(
-                                const IconData(59389,
-                                    fontFamily: 'MaterialIcons'),
-                                color: const Color(0xFF707070),
-                                size: 28.0,
+                              InkWell(
+                                child: Icon(
+                                  const IconData(59389, fontFamily: 'MaterialIcons'),
+                                  color: const Color(0xFF707070),
+                                  size: 28.0,
+                                ),
+                                onTap: (){
+                                  Navigator.push(
+                                    context,
+                                    MaterialPageRoute(
+                                        builder: (context) => ProfileScreen()),
+                                  );
+                                },
                               ),
                             ],
                           ),
@@ -96,88 +105,6 @@ class _CommunityScreenState extends State<CommunityScreen> {
                                 ],
                               ),
                             ]),
-//              Row(
-//                mainAxisAlignment: MainAxisAlignment.spaceBetween,
-//                children: <Widget>[
-//                  Card(
-//                    shape: RoundedRectangleBorder(
-//                        borderRadius: BorderRadius.all(Radius.circular(8.0))),
-//                    color: const Color(0xFF4285F4),
-//                    child: Container(
-//                      width: MediaQuery.of(context).size.width * .40,
-//                      padding: EdgeInsets.all(16.0),
-//                      child: Column(
-//                        crossAxisAlignment: CrossAxisAlignment.start,
-//                        children: <Widget>[
-//                          Row(children: <Widget>[
-//                            Icon(
-//                                const IconData(58900, fontFamily: 'MaterialIcons'),
-//                              color: Colors.white,
-//                            ),
-//                            Container(
-//                              padding: EdgeInsets.only(left: 12.0),
-//                              child: Text(
-//                                '08',
-//                                style: TextStyle(
-//                                    fontSize: 24.0,
-//                                    color: Colors.white,
-//                                    fontFamily: 'Monsterrat'),
-//                              ),
-//                            ),
-//                          ]),
-//                          Text(
-//                            'Total Events',
-//                            style: TextStyle(
-//                                fontSize: 16.0,
-//                                color: Colors.white,
-//                                fontFamily: 'Monsterrat'),
-//                          )
-//                        ],
-//                      ),
-//                    ),
-//                  ),
-//                  Card(
-//                    shape: RoundedRectangleBorder(
-//                        borderRadius: BorderRadius.all(Radius.circular(8.0))),
-//                    color: const Color(0xFF4285F4),
-//                    child: Container(
-//                      width: MediaQuery.of(context).size.width * .40,
-//                      padding: EdgeInsets.all(16.0),
-//                      child: Column(
-//                        crossAxisAlignment: CrossAxisAlignment.start,
-//                        children: <Widget>[
-//                          Row(
-//                            children: <Widget>[
-//                              Icon(
-//                                const IconData(58900, fontFamily: 'MaterialIcons'),
-//                                color: Colors.white,
-//                              ),
-//                              Container(
-//                                padding: EdgeInsets.only(left: 12.0),
-//                                child: Text(
-//                                  '05',
-//                                  style: TextStyle(
-//                                      fontSize: 24.0,
-//                                      color: Colors.white,
-//                                      fontFamily: 'Monsterrat'),
-//                                ),
-//                              ),
-//                            ],
-//                          ),
-//                          Text(
-//                            'Members',
-//                            style: TextStyle(
-//                                fontSize: 16.0,
-//                                color: Colors.white,
-//                                fontFamily: 'Monsterrat'),
-//                          )
-//                        ],
-//                      ),
-//                    ),
-//                  )
-//                ],
-//              ),
-
                         Container(
                           padding: EdgeInsets.only(top: 20.0),
                           child: Text(
@@ -235,187 +162,123 @@ class _CommunityScreenState extends State<CommunityScreen> {
                     child: Row(
                       mainAxisAlignment: MainAxisAlignment.spaceAround,
                       children: <Widget>[
-                        FittedBox(
-                          fit: BoxFit.fitHeight,
-                          child: Column(
-                            mainAxisSize: MainAxisSize.min,
-                            children: <Widget>[
-                              IconButton(
-                                color: Colors.black54,
-                                icon: Icon(
-                                  Icons.calendar_today,
-                                  color: const Color(0xFFF1F1F1),
+                        InkWell(
+                          onTap: () {
+                            Navigator.push(
+                              context,
+                              MaterialPageRoute(
+                                  builder: (context) => EventsScreen()),
+                            );
+                          },
+                          child: FittedBox(
+                            fit: BoxFit.fitHeight,
+                            child: Column(
+                              mainAxisSize: MainAxisSize.min,
+                              children: <Widget>[
+                                IconButton(
+                                  color: Colors.black54,
+                                  icon: Icon(
+                                    Icons.calendar_today,
+                                    color: const Color(0xFFF1F1F1),
+                                  ),
+                                  onPressed: () {
+                                    Navigator.push(
+                                      context,
+                                      MaterialPageRoute(
+                                          builder: (context) => EventsScreen()),
+                                    );
+                                  },
                                 ),
-                                onPressed: () {
-                                  Navigator.push(
-                                    context,
-                                    MaterialPageRoute(
-                                        builder: (context) => EventsScreen()),
-                                  );
-                                },
-                              ),
-                              Text(
-                                'Events',
-                                style: TextStyle(
-                                  fontSize: 14,
-                                  fontWeight: FontWeight.bold,
-                                  color: const Color(0xFFF1F1F1),
+                                Text(
+                                  'Events',
+                                  style: TextStyle(
+                                    fontSize: 14,
+                                    fontWeight: FontWeight.bold,
+                                    color: const Color(0xFFF1F1F1),
+                                  ),
                                 ),
-                              ),
-                            ],
+                              ],
+                            ),
                           ),
                         ),
-                        FittedBox(
-                          fit: BoxFit.fitHeight,
-                          child: Column(
-                            mainAxisSize: MainAxisSize.min,
-                            children: <Widget>[
-                              IconButton(
-                                color: Colors.black54,
-                                icon: Icon(
-                                  Icons.info_outline,
-                                  color: const Color(0xFFF1F1F1),
-
+                        InkWell(
+                          onTap: () {
+                            Navigator.push(
+                              context,
+                              MaterialPageRoute(
+                                  builder: (context) => AboutScreen()),
+                            );
+                          },
+                          child: FittedBox(
+                            fit: BoxFit.fitHeight,
+                            child: Column(
+                              mainAxisSize: MainAxisSize.min,
+                              children: <Widget>[
+                                IconButton(
+                                  color: Colors.black54,
+                                  icon: Icon(
+                                    Icons.info_outline,
+                                    color: const Color(0xFFF1F1F1),
+                                  ),
+                                  onPressed: () {
+                                    Navigator.push(
+                                      context,
+                                      MaterialPageRoute(
+                                          builder: (context) => AboutScreen()),
+                                    );
+                                  },
                                 ),
-                                onPressed: () {
-                                  Navigator.push(
-                                    context,
-                                    MaterialPageRoute(
-                                        builder: (context) => AboutScreen()),
-                                  );
-                                },
-                              ),
-                              Text(
-                                'About',
-                                style: TextStyle(
-                                  fontSize: 14.0,
-                                  fontWeight: FontWeight.bold,
-                                  color: const Color(0xFFF1F1F1),
+                                Text(
+                                  'About',
+                                  style: TextStyle(
+                                    fontSize: 14.0,
+                                    fontWeight: FontWeight.bold,
+                                    color: const Color(0xFFF1F1F1),
+                                  ),
                                 ),
-                              ),
-                            ],
+                              ],
+                            ),
                           ),
                         ),
-                        FittedBox(
-                          fit: BoxFit.fitHeight,
-                          child: Column(
-                            mainAxisSize: MainAxisSize.min,
-                            children: <Widget>[
-                              IconButton(
-                                color: Colors.black54,
-                                icon: Icon(
-                                  Icons.contacts,
-                                  color: const Color(0xFFF1F1F1),
-
+                        InkWell(
+                          onTap: () {
+                            Navigator.push(
+                              context,
+                              MaterialPageRoute(
+                                  builder: (context) => TeamScreen()),
+                            );
+                          },
+                          child: FittedBox(
+                            fit: BoxFit.fitHeight,
+                            child: Column(
+                              mainAxisSize: MainAxisSize.min,
+                              children: <Widget>[
+                                IconButton(
+                                  color: Colors.black54,
+                                  icon: Icon(
+                                    Icons.contacts,
+                                    color: const Color(0xFFF1F1F1),
+                                  ),
+                                  onPressed: () {
+                                    Navigator.push(
+                                      context,
+                                      MaterialPageRoute(
+                                          builder: (context) => TeamScreen()),
+                                    );
+                                  },
                                 ),
-                                onPressed: () {
-                                  Navigator.push(
-                                    context,
-                                    MaterialPageRoute(
-                                        builder: (context) => TeamScreen()),
-                                  );
-                                },
-                              ),
-                              Text(
-                                'Team',
-                                style: TextStyle(
-                                  fontSize: 14.0,
-                                  fontWeight: FontWeight.bold,
-                                  color: const Color(0xFFF1F1F1),
+                                Text(
+                                  'Team',
+                                  style: TextStyle(
+                                    fontSize: 14.0,
+                                    fontWeight: FontWeight.bold,
+                                    color: const Color(0xFFF1F1F1),
+                                  ),
                                 ),
-                              ),
-                            ],
+                              ],
+                            ),
                           ),
                         ),
-
-                        // RaisedButton(
-                        //     padding:
-                        //         EdgeInsets.symmetric(vertical: 12, horizontal: 16.0),
-                        //     child: Text(
-                        //       'Events',
-                        //       style: TextStyle(
-                        //         fontSize: 20.0,
-                        //         fontWeight: FontWeight.bold,
-                        //         color: Colors.white,
-                        //       ),
-                        //     ),
-                        //     color: const Color(0xFFEA4335),
-                        //     shape: RoundedRectangleBorder(
-                        //         borderRadius: new BorderRadius.circular(8.0)),
-                        //     onPressed: () {
-                        //       Navigator.push(
-                        //         context,
-                        //         MaterialPageRoute(builder: (context) => EventsScreen()),
-                        //       );
-                        //     }),
-
-                        // RaisedButton(
-                        //     padding:
-                        //         EdgeInsets.symmetric(vertical: 12, horizontal: 16.0),
-                        //     child: Text(
-                        //       'About',
-                        //       style: TextStyle(
-                        //         fontSize: 20.0,
-                        //         fontWeight: FontWeight.bold,
-                        //         color: Colors.white,
-                        //       ),
-                        //     ),
-                        //     color: const Color(0xFFEA4335),
-                        //     shape: RoundedRectangleBorder(
-                        //         borderRadius: new BorderRadius.circular(8.0)),
-                        //     onPressed: () {
-                        //       Navigator.push(
-                        //         context,
-                        //         MaterialPageRoute(builder: (context) => AboutScreen()),
-                        //       );
-                        //     }),
-                        // RaisedButton(
-                        //     padding:
-                        //         EdgeInsets.symmetric(vertical: 12, horizontal: 16.0),
-                        //     child: Text(
-                        //       'Team',
-                        //       style: TextStyle(
-                        //         fontSize: 20.0,
-                        //         fontWeight: FontWeight.bold,
-                        //         color: Colors.white,
-                        //       ),
-                        //     ),
-                        //     color: const Color(0xFFEA4335),
-                        //     shape: RoundedRectangleBorder(
-                        //         borderRadius: new BorderRadius.circular(8.0)),
-                        //     onPressed: () {
-                        //       Navigator.push(
-                        //         context,
-                        //         MaterialPageRoute(builder: (context) => TeamScreen()),
-                        //       );
-                        //     }),
-                        // IconButton(
-                        //   icon: Icon(Icons.calendar_today,),
-                        //   onPressed: () {
-                        //     Navigator.push(
-                        //       context,
-                        //       MaterialPageRoute(builder: (context) => EventsScreen()),
-                        //     );
-                        //   },
-                        // ),
-                        // IconButton(
-                        //   icon: Icon(Icons.calendar_today),
-                        //   onPressed: () {
-                        //     Navigator.push(
-                        //       context,
-                        //       MaterialPageRoute(builder: (context) => AboutScreen()),
-                        //     );
-                        //   },
-                        // ),
-                        // IconButton(
-                        //   icon: Icon(Icons.calendar_today),
-                        //   onPressed: () {
-                        //     Navigator.push(
-                        //       context,
-                        //       MaterialPageRoute(builder: (context) => TeamScreen()),
-                        //     );
-                        //   },
-                        // ),
                       ],
                     ),
                   ),

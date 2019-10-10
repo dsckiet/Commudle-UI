@@ -1,5 +1,6 @@
 import 'package:commudle/routes/communities_list_screen.dart';
 import 'package:commudle/routes/community_screen.dart';
+import 'package:commudle/routes/profile_screen.dart';
 import 'package:commudle/widgets/community_card.dart';
 import 'package:commudle/widgets/next_event_card.dart';
 import 'package:commudle/widgets/event_card.dart';
@@ -165,6 +166,9 @@ class _HomeScreenState extends State<HomeScreen> {
                         left: 20.0, top: 48.0, bottom: 16.0, right: 20.0),
                     child: Row(
                       children: <Widget>[
+                        Padding(
+                          padding: EdgeInsets.only(left: 20.0),
+                        ),
                         Expanded(
                           child: Text(
                             "Home",
@@ -172,10 +176,19 @@ class _HomeScreenState extends State<HomeScreen> {
                             textAlign: TextAlign.center,
                           ),
                         ),
-                        Icon(
-                          const IconData(59389, fontFamily: 'MaterialIcons'),
-                          color: const Color(0xFF707070),
-                          size: 28.0,
+                        InkWell(
+                          child: Icon(
+                            const IconData(59389, fontFamily: 'MaterialIcons'),
+                            color: const Color(0xFF707070),
+                            size: 28.0,
+                          ),
+                          onTap: (){
+                            Navigator.push(
+                              context,
+                              MaterialPageRoute(
+                                  builder: (context) => ProfileScreen()),
+                            );
+                          },
                         ),
                       ],
                     ),

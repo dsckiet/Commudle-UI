@@ -1,3 +1,4 @@
+import 'package:commudle/routes/profile_screen.dart';
 import 'package:commudle/widgets/event_card.dart';
 import 'package:flutter/material.dart';
 
@@ -34,26 +35,42 @@ class _EventsScreenState extends State<EventsScreen> {
                       'Events',
                       style: Theme.of(context).textTheme.headline,
                     ),
-                    Icon(
-                      const IconData(59389, fontFamily: 'MaterialIcons'),
-                      color: const Color(0xFF707070),
-                      size: 28.0,
+                    InkWell(
+                      child: Icon(
+                        const IconData(59389, fontFamily: 'MaterialIcons'),
+                        color: const Color(0xFF707070),
+                        size: 28.0,
+                      ),
+                      onTap: (){
+                        Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                              builder: (context) => ProfileScreen()),
+                        );
+                      },
                     ),
                   ],
                 ),
               ),
-              Container(
-                padding: EdgeInsets.only(top: 16.0, left: 20.0),
-                child: Image(
-                  image: AssetImage('assets/images/temp-wtm.png'),
-                ),
-              ),
-              Container(
-                padding: EdgeInsets.only(left: 20.0, top: 4.0),
-                child: Text(
-                  'Developer Student Clubs KIET',
-                  style: Theme.of(context).textTheme.title,
-                ),
+              Row(
+                crossAxisAlignment: CrossAxisAlignment.end,
+                children: <Widget>[
+                  Container(
+                    padding: EdgeInsets.only(left: 20.0),
+                    child: Image(
+                      image: AssetImage('assets/images/temp-wtm.png'),
+                    ),
+                  ),
+                  Flexible(
+                    child: Container(
+                      padding: EdgeInsets.symmetric(horizontal: 20.0),
+                      child: Text(
+                        'Developer student clubs KIET',
+                        style: Theme.of(context).textTheme.title,
+                      ),
+                    ),
+                  ),
+                ],
               ),
               Container(
                 padding: EdgeInsets.symmetric(horizontal: 20.0),

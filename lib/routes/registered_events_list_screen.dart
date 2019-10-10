@@ -1,3 +1,4 @@
+import 'package:commudle/routes/profile_screen.dart';
 import 'package:commudle/routes/registered_event_screen.dart';
 import 'package:commudle/widgets/event_card.dart';
 import 'package:flutter/material.dart';
@@ -34,10 +35,19 @@ class _RegisteredEventsListState extends State<RegisteredEventsList> {
                       'Registered Events',
                       style: Theme.of(context).textTheme.headline,
                     ),
-                    Icon(
-                      const IconData(59389, fontFamily: 'MaterialIcons'),
-                      color: const Color(0xFF707070),
-                      size: 28.0,
+                    InkWell(
+                      child: Icon(
+                        const IconData(59389, fontFamily: 'MaterialIcons'),
+                        color: const Color(0xFF707070),
+                        size: 28.0,
+                      ),
+                      onTap: (){
+                        Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                              builder: (context) => ProfileScreen()),
+                        );
+                      },
                     ),
                   ],
                 ),
