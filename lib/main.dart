@@ -1,5 +1,6 @@
 import 'package:commudle/routes/about_screen.dart';
 import 'package:commudle/routes/community_screen.dart';
+import 'package:commudle/routes/event_details_screen.dart';
 import 'package:commudle/routes/events_screen.dart';
 import 'package:commudle/routes/profile_screen.dart';
 import 'package:commudle/routes/registered_events_list_screen.dart';
@@ -48,7 +49,7 @@ class MyApp extends StatelessWidget {
                   fontWeight: FontWeight.w600,
                   color: const Color(0xFF707070)))),
       debugShowCheckedModeBanner: false,
-      home: SplashScreen(),
+      home: EventDetailsScreen(),
       routes: <String, WidgetBuilder>{
         '/IntroScreen': (BuildContext context) => IntroScreen(),
         '/AuthScreen': (BuildContext context) => AuthScreen(),
