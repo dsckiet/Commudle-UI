@@ -116,35 +116,35 @@ class _ProfileScreenState extends State<ProfileScreen> {
                 ),
               ),
               Container(
-                padding: EdgeInsets.only(top: 28.0,bottom: 20.0),
+                padding: EdgeInsets.only(top: 28.0, bottom: 20.0),
                 width: MediaQuery.of(context).size.width,
                 child: RaisedButton(
                   shape: RoundedRectangleBorder(
-                      borderRadius: BorderRadius.circular(8.0)),
+                      borderRadius: BorderRadius.circular(22.0)),
                   child: Padding(
                     padding: EdgeInsets.symmetric(vertical: 8.0),
                     child: Text(
                       'Update Details',
                       style: TextStyle(
-                        fontSize: 20.0,
+                          fontSize: 20.0,
                           fontWeight: FontWeight.bold,
                           fontFamily: 'Montserrat',
-                          color: Colors.white
-                      ),
+                          color: Colors.white),
                     ),
                   ),
                   color: const Color(0xFF4285F4),
                   onPressed: () {},
                 ),
               ),
-              Container(
-                width: MediaQuery.of(context).size.width,
-                child: Text(
-                  'Logout',
-                  style: TextStyle(
-                    color: Color(0xFFDB4437)
+              InkWell(
+                onTap: networkErrorPage,
+                child: Container(
+                  width: MediaQuery.of(context).size.width,
+                  child: Text(
+                    'Logout',
+                    style: TextStyle(color: Color(0xFFDB4437)),
+                    textAlign: TextAlign.center,
                   ),
-                  textAlign: TextAlign.center,
                 ),
               )
             ],
@@ -152,5 +152,9 @@ class _ProfileScreenState extends State<ProfileScreen> {
         ),
       ),
     );
+  }
+
+  void networkErrorPage() {
+    Navigator.of(context).pushNamed('/NetworkError');
   }
 }

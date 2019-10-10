@@ -1,4 +1,3 @@
-import 'package:commudle/routes/communities_list_screen.dart';
 import 'package:commudle/routes/community_screen.dart';
 import 'package:commudle/routes/profile_screen.dart';
 import 'package:commudle/widgets/community_card.dart';
@@ -40,34 +39,35 @@ class _HomeScreenState extends State<HomeScreen> {
         Padding(
           padding: EdgeInsets.only(bottom: 10.0),
           child: Container(
-              margin: EdgeInsets.symmetric(vertical: 20.0),
-              height: 100.0,
-              child: Container(
-                child: ListView(
-                  shrinkWrap: true,
-                  scrollDirection: Axis.horizontal,
-                  children: <Widget>[
-                    Padding(
-                      padding: EdgeInsets.only(left: 18.0),
-                    ),
-                    InkWell(
-                      child: CommunityCard(),
-                      onTap: () {
-                        Navigator.push(
-                          context,
-                          MaterialPageRoute(
-                              builder: (context) => CommunityScreen()),
-                        );
-                      },
-                    ),
-                    CommunityCard(),
-                    CommunityCard(),
-                    CommunityCard(),
-                    CommunityCard(),
-                  ],
-                ),
-              )),
-        )
+            margin: EdgeInsets.symmetric(vertical: 20.0),
+            height: 100.0,
+            child: Container(
+              child: ListView(
+                shrinkWrap: true,
+                scrollDirection: Axis.horizontal,
+                children: <Widget>[
+                  Padding(
+                    padding: EdgeInsets.only(left: 18.0),
+                  ),
+                  InkWell(
+                    child: CommunityCard(),
+                    onTap: () {
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                            builder: (context) => CommunityScreen()),
+                      );
+                    },
+                  ),
+                  CommunityCard(),
+                  CommunityCard(),
+                  CommunityCard(),
+                  CommunityCard(),
+                ],
+              ),
+            ),
+          ),
+        ),
       ],
     );
   }
@@ -182,7 +182,7 @@ class _HomeScreenState extends State<HomeScreen> {
                             color: const Color(0xFF707070),
                             size: 28.0,
                           ),
-                          onTap: (){
+                          onTap: () {
                             Navigator.push(
                               context,
                               MaterialPageRoute(
