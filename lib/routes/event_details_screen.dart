@@ -99,7 +99,7 @@ class _EventDetailsScreenState extends State<EventDetailsScreen> {
                 children: <Widget>[
                   Image(
                     image: AssetImage('assets/images/eventImage.png'),
-                    fit: BoxFit.cover,
+                    fit: BoxFit.fill,
                   ),
                   Container(
                     decoration: BoxDecoration(

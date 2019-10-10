@@ -8,6 +8,7 @@ import 'package:commudle/routes/profile_screen.dart';
 import 'package:commudle/routes/network_error_page.dart';
 import 'package:commudle/routes/registered_events_list_screen.dart';
 import 'package:commudle/routes/schedule_page.dart';
+import 'package:commudle/routes/speaker_details_screen.dart';
 import 'package:flutter/material.dart';
 
 import 'package:commudle/routes/splash_screen.dart';
@@ -54,7 +55,7 @@ class MyApp extends StatelessWidget {
       ),
       debugShowCheckedModeBanner: false,
 
-      home: SplashScreen(),
+      home: SpeakerDetailsScreen(),
       routes: <String, WidgetBuilder>{
         '/IntroScreen': (BuildContext context) => IntroScreen(),
         '/AuthScreen': (BuildContext context) => AuthScreen(),
