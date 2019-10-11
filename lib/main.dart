@@ -55,7 +55,7 @@ class MyApp extends StatelessWidget {
       ),
       debugShowCheckedModeBanner: false,
 
-      home: SpeakerDetailsScreen(),
+      home: SchedulePage(),
       routes: <String, WidgetBuilder>{
         '/IntroScreen': (BuildContext context) => IntroScreen(),
         '/AuthScreen': (BuildContext context) => AuthScreen(),
