@@ -39,4 +39,5 @@ flutter:
     - assets/images/github.png
     - assets/images/linkedin.png
     - assets/images/profileImage.png
+    - assets/images/eventImage.png
     - assets/images/oops_network.png
