@@ -9,11 +9,10 @@ class _SpeakerDetailCardState extends State<SpeakerDetailCard> {
   @override
   Widget build(BuildContext context) {
     return Card(
-      shape: RoundedRectangleBorder(
-          borderRadius: BorderRadius.circular(8.0),
+      shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(8.0),
           side: BorderSide(color: Color(0xFFd5d5d5), width: 1.0)),
       child: Container(
-        padding: EdgeInsets.symmetric(horizontal: 10.0,vertical: 12.0),
+        padding: EdgeInsets.symmetric(horizontal: 12.0, vertical: 12.0),
         child: Row(
           children: <Widget>[
             CircleAvatar(
@@ -27,7 +26,7 @@ class _SpeakerDetailCardState extends State<SpeakerDetailCard> {
               backgroundColor: Colors.transparent,
             ),
             Padding(
-              padding: EdgeInsets.only(left: 8.0,right: 8.0),
+              padding: EdgeInsets.only(left: 8.0, right: 8.0),
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: <Widget>[

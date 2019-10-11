@@ -1,6 +1,6 @@
-
 import 'package:commudle/routes/about_screen.dart';
 import 'package:commudle/routes/community_screen.dart';
+import 'package:commudle/routes/discussion_screen.dart';
 import 'package:commudle/routes/event_details_screen.dart';
 import 'package:commudle/routes/events_screen.dart';
 import 'package:commudle/routes/profile_screen.dart';
@@ -55,7 +55,11 @@ class MyApp extends StatelessWidget {
       ),
       debugShowCheckedModeBanner: false,
 
-      home: AboutScreen(),
+
+
+
+      home: SplashScreen(),
+
       routes: <String, WidgetBuilder>{
         '/IntroScreen': (BuildContext context) => IntroScreen(),
         '/AuthScreen': (BuildContext context) => AuthScreen(),
@@ -66,6 +70,7 @@ class MyApp extends StatelessWidget {
             RegisteredEventsList(),
         '/NetworkError': (BuildContext context) => NetworkErrorPage(),
         '/SchedulePage': (BuildContext context) => SchedulePage(),
+        '/DiscussionPage': (BuildContext context) => DiscussionPage(),
       },
     );
   }

@@ -1,13 +1,14 @@
 import 'package:commudle/routes/profile_screen.dart';
-import 'package:commudle/widgets/schedule_card.dart';
+import 'package:commudle/widgets/discussion_card.dart';
+import 'package:commudle/widgets/sub_discussion_card.dart';
 import 'package:flutter/material.dart';
 
-class SchedulePage extends StatefulWidget {
+class DiscussionPage extends StatefulWidget {
   @override
-  _SchedulePageState createState() => _SchedulePageState();
+  _DiscussionPageState createState() => _DiscussionPageState();
 }
 
-class _SchedulePageState extends State<SchedulePage> {
+class _DiscussionPageState extends State<DiscussionPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -35,7 +36,7 @@ class _SchedulePageState extends State<SchedulePage> {
                       ),
                     ),
                     Text(
-                      'Schedule',
+                      'Discussion',
                       style: Theme.of(context).textTheme.headline,
                     ),
                     InkWell(
@@ -58,10 +59,9 @@ class _SchedulePageState extends State<SchedulePage> {
               ListView(
                 shrinkWrap: true,
                 children: <Widget>[
-                  ScheduleCard(),
-                  ScheduleCard(),
-                  ScheduleCard(),
-                  ScheduleCard(),
+                  DiscussionCard(),
+                  SubDiscussionCard(),
+                  DiscussionCard(),
                 ],
               ),
             ],
