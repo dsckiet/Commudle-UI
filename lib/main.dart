@@ -28,7 +28,7 @@ class MyApp extends StatelessWidget {
         primaryColor: const Color(0xFF4285F4),
         textTheme: ThemeData.dark().textTheme.copyWith(
               headline: TextStyle(
-                fontSize: 24,
+                fontSize: 16,
                 fontFamily: 'Montserrat',
                 color: const Color(0xFF263238),
                 fontWeight: FontWeight.w600,
@@ -54,7 +54,12 @@ class MyApp extends StatelessWidget {
             ),
       ),
       debugShowCheckedModeBanner: false,
-      home: DiscussionPage(),
+
+
+
+
+      home: SplashScreen(),
+
       routes: <String, WidgetBuilder>{
         '/IntroScreen': (BuildContext context) => IntroScreen(),
         '/AuthScreen': (BuildContext context) => AuthScreen(),

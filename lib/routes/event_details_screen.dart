@@ -1,6 +1,10 @@
 import 'package:commudle/routes/profile_screen.dart';
+import 'package:commudle/routes/schedule_page.dart';
+import 'package:commudle/routes/speaker_details_screen.dart';
 import 'package:commudle/widgets/member_card.dart';
 import 'package:flutter/material.dart';
+
+import 'discussion_screen.dart';
 
 class EventDetailsScreen extends StatefulWidget {
   @override
@@ -99,7 +103,7 @@ class _EventDetailsScreenState extends State<EventDetailsScreen> {
                 children: <Widget>[
                   Image(
                     image: AssetImage('assets/images/eventImage.png'),
-                    fit: BoxFit.fill,
+                    fit: BoxFit.cover,
                   ),
                   Container(
                     decoration: BoxDecoration(
@@ -220,7 +224,13 @@ class _EventDetailsScreenState extends State<EventDetailsScreen> {
                       ),
                     ),
                     color: Color(0xFF707070),
-                    onPressed: () {},
+                    onPressed: () {
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                            builder: (context) => SpeakerDetailsScreen()),
+                      );
+                    },
                   ),
                   OutlineButton(
                     shape: RoundedRectangleBorder(
@@ -235,7 +245,13 @@ class _EventDetailsScreenState extends State<EventDetailsScreen> {
                       ),
                     ),
                     color: Color(0xFF707070),
-                    onPressed: () {},
+                    onPressed: () {
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                            builder: (context) => SchedulePage()),
+                      );
+                    },
                   ),
                   OutlineButton(
                     shape: RoundedRectangleBorder(
@@ -250,7 +266,13 @@ class _EventDetailsScreenState extends State<EventDetailsScreen> {
                       ),
                     ),
                     color: Color(0xFF707070),
-                    onPressed: () {},
+                    onPressed: () {
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                            builder: (context) => DiscussionPage()),
+                      );
+                    },
                   ),
                 ],
               ),
@@ -270,7 +292,8 @@ class _EventDetailsScreenState extends State<EventDetailsScreen> {
                 crossAxisCount: 2,
                 mainAxisSpacing: 4.0,
                 crossAxisSpacing: 4.0,
-                childAspectRatio: (MediaQuery.of(context).size.width/3.3) / (MediaQuery.of(context).size.height/4.2),
+                childAspectRatio: (MediaQuery.of(context).size.width / 3.3) /
+                    (MediaQuery.of(context).size.height / 4.2),
                 shrinkWrap: true,
                 children: <Widget>[
                   MemberCard(),
@@ -293,8 +316,7 @@ class _EventDetailsScreenState extends State<EventDetailsScreen> {
                         fontSize: 20.0,
                         fontWeight: FontWeight.bold,
                         fontFamily: 'Montserrat',
-                        color: Colors.white
-                    ),
+                        color: Colors.white),
                   ),
                 ),
                 color: const Color(0xFF4285F4),

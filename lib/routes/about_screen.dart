@@ -30,6 +30,7 @@ class _AboutScreenState extends State<AboutScreen> {
                             fontFamily: 'MaterialIcons',
                             matchTextDirection: true),
                         color: const Color(0xFF707070),
+                        size: 20.0,
                       ),
                     ),
                     Text(
@@ -40,7 +41,7 @@ class _AboutScreenState extends State<AboutScreen> {
                       child: Icon(
                         const IconData(59389, fontFamily: 'MaterialIcons'),
                         color: const Color(0xFF707070),
-                        size: 28.0,
+                        size: 24.0,
                       ),
                       onTap: () {
                         Navigator.push(
