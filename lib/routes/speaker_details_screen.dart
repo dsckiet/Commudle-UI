@@ -32,6 +32,7 @@ class _SpeakerDetailsScreenState extends State<SpeakerDetailsScreen> {
                             fontFamily: 'MaterialIcons',
                             matchTextDirection: true),
                         color: const Color(0xFF707070),
+                        size: 20.0,
                       ),
                     ),
                     Text(
@@ -42,7 +43,7 @@ class _SpeakerDetailsScreenState extends State<SpeakerDetailsScreen> {
                       child: Icon(
                         const IconData(59389, fontFamily: 'MaterialIcons'),
                         color: const Color(0xFF707070),
-                        size: 28.0,
+                        size: 24.0,
                       ),
                       onTap: () {
                         Navigator.push(

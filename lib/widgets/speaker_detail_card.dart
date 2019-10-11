@@ -11,9 +11,9 @@ class _SpeakerDetailCardState extends State<SpeakerDetailCard> {
     return Card(
       shape: RoundedRectangleBorder(
           borderRadius: BorderRadius.circular(8.0),
-          side: BorderSide(color: Color(0xFF707070), width: 1.0)),
+          side: BorderSide(color: Color(0xFFd5d5d5), width: 1.0)),
       child: Container(
-        padding: EdgeInsets.symmetric(horizontal: 12.0,vertical: 12.0),
+        padding: EdgeInsets.symmetric(horizontal: 10.0,vertical: 12.0),
         child: Row(
           children: <Widget>[
             CircleAvatar(
@@ -27,21 +27,59 @@ class _SpeakerDetailCardState extends State<SpeakerDetailCard> {
               backgroundColor: Colors.transparent,
             ),
             Padding(
-              padding: EdgeInsets.only(left: 8.0),
+              padding: EdgeInsets.only(left: 8.0,right: 8.0),
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: <Widget>[
                   Text(
                     'Shubham Singh',
-                    style: Theme.of(context).textTheme.body1,
+                    style: Theme.of(context).textTheme.body2,
                   ),
                   Text(
                     'Android Developer',
-                    style: Theme.of(context).textTheme.body1,
+                    style: TextStyle(
+                      fontSize: 11.0,
+                      fontFamily: 'Montserrat',
+                    ),
                   ),
                 ],
               ),
-            )
+            ),
+            Expanded(
+              child: Row(
+                mainAxisSize: MainAxisSize.max,
+                mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                children: <Widget>[
+                  CircleAvatar(
+                    radius: 12.0,
+                    child: Container(
+                      padding: EdgeInsets.all(6.0),
+                      child: Image(
+                        image: AssetImage('assets/images/twitter.png'),
+                      ),
+                    ),
+                  ),
+                  CircleAvatar(
+                    radius: 12.0,
+                    child: Container(
+                      padding: EdgeInsets.all(4.0),
+                      child: Image(
+                        image: AssetImage('assets/images/github.png'),
+                      ),
+                    ),
+                  ),
+                  CircleAvatar(
+                    radius: 12.0,
+                    child: Container(
+                      padding: EdgeInsets.all(6.0),
+                      child: Image(
+                        image: AssetImage('assets/images/linkedin.png'),
+                      ),
+                    ),
+                  ),
+                ],
+              ),
+            ),
           ],
         ),
       ),
