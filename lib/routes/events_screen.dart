@@ -54,25 +54,25 @@ class _EventsScreenState extends State<EventsScreen> {
                   ],
                 ),
               ),
-              Row(
-                crossAxisAlignment: CrossAxisAlignment.end,
-                children: <Widget>[
-                  Container(
-                    padding: EdgeInsets.only(left: 20.0),
-                    child: Image(
+              Padding(
+                padding: EdgeInsets.only(left: 20.0,right: 20.0),
+                child: Row(
+                  children: <Widget>[
+                    Image(
                       image: AssetImage('assets/images/temp-wtm.png'),
                     ),
-                  ),
-                  Flexible(
-                    child: Container(
-                      padding: EdgeInsets.symmetric(horizontal: 20.0),
-                      child: Text(
-                        'Developer student clubs KIET',
-                        style: Theme.of(context).textTheme.title,
+                    Flexible(
+                      child: Container(
+                        padding:
+                        EdgeInsets.only(left: 12.0),
+                        child: Text(
+                          'Developer student clubs KIET',
+                          style: Theme.of(context).textTheme.title,
+                        ),
                       ),
                     ),
-                  ),
-                ],
+                  ],
+                ),
               ),
               Container(
                 padding: EdgeInsets.symmetric(horizontal: 20.0),
