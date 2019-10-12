@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'dart:async';
 
-import 'package:flutter/services.dart';
 
 class SplashScreen extends StatefulWidget {
   @override
@@ -12,7 +11,7 @@ class _SplashScreenState extends State<SplashScreen> {
   double _opacity = 1.0;
 
   startTime() async {
-    var _duration = new Duration(milliseconds: 4000);
+    var _duration = new Duration(milliseconds: 2500);
     return new Timer(_duration, navigationPage);
   }
 
@@ -46,7 +45,7 @@ class _SplashScreenState extends State<SplashScreen> {
             Container(
               child: GestureDetector(
                 child: AnimatedOpacity(
-                  duration: Duration(milliseconds: 3600),
+                  duration: Duration(milliseconds: 2000),
                   opacity: this._opacity,
                   child: DecoratedBox(
                     decoration: BoxDecoration(
