@@ -1,31 +1,27 @@
-import 'package:commudle/routes/about_screen.dart';
-import 'package:commudle/routes/community_screen.dart';
 import 'package:commudle/routes/discussion_screen.dart';
-import 'package:commudle/routes/event_details_screen.dart';
-import 'package:commudle/routes/events_screen.dart';
-import 'package:commudle/routes/profile_screen.dart';
-
 import 'package:commudle/routes/network_error_page.dart';
 import 'package:commudle/routes/registered_events_list_screen.dart';
 import 'package:commudle/routes/schedule_page.dart';
-import 'package:commudle/routes/speaker_details_screen.dart';
 import 'package:flutter/material.dart';
-
 import 'package:commudle/routes/splash_screen.dart';
 import 'package:commudle/routes/intro_screen.dart';
 import 'package:commudle/routes/auth_screen.dart';
 import 'package:commudle/routes/communities_list_screen.dart';
 import 'package:commudle/routes/home_screen.dart';
+import 'package:flutter/services.dart';
 
 void main() => runApp(MyApp());
 
 class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
+    SystemChrome.setSystemUIOverlayStyle(SystemUiOverlayStyle(
+      statusBarColor: const Color(0xFF707070),
+    ));
     return MaterialApp(
       title: "Commudle",
       theme: ThemeData(
-        primaryColor: const Color(0xFF4285F4),
+        primaryColor: const Color(0xFF263238),
         textTheme: ThemeData.dark().textTheme.copyWith(
               headline: TextStyle(
                 fontSize: 16,
@@ -54,12 +50,7 @@ class MyApp extends StatelessWidget {
             ),
       ),
       debugShowCheckedModeBanner: false,
-
-
-
-
       home: SplashScreen(),
-
       routes: <String, WidgetBuilder>{
         '/IntroScreen': (BuildContext context) => IntroScreen(),
         '/AuthScreen': (BuildContext context) => AuthScreen(),

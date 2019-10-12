@@ -4,6 +4,7 @@ import 'package:commudle/widgets/community_card.dart';
 import 'package:commudle/widgets/next_event_card.dart';
 import 'package:commudle/widgets/event_card.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 
 class HomeScreen extends StatefulWidget {
   @override
