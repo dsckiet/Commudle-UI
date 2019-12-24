@@ -25,26 +25,26 @@ class MyApp extends StatelessWidget {
         textTheme: ThemeData.dark().textTheme.copyWith(
               headline: TextStyle(
                 fontSize: 16,
-                fontFamily: 'Montserrat',
+                fontFamily: 'Product Sans',
                 color: const Color(0xFF263238),
                 fontWeight: FontWeight.w600,
               ),
               title: TextStyle(
                 fontSize: 20.0,
-                fontFamily: 'Montserrat',
+                fontFamily: 'Product Sans',
                 fontWeight: FontWeight.w600,
                 color: const Color(0xFF707070),
               ),
               body1: TextStyle(
                 fontSize: 16.0,
-                fontFamily: 'Montserrat',
-                fontWeight: FontWeight.w600,
+                fontFamily: 'Product Sans',
+                fontWeight: FontWeight.w400,
                 color: const Color(0xFF707070),
               ),
               body2: TextStyle(
                 fontSize: 14.0,
-                fontFamily: 'Montserrat',
-                fontWeight: FontWeight.w600,
+                fontFamily: 'Product Sans',
+                fontWeight: FontWeight.w400,
                 color: const Color(0xFF707070),
               ),
             ),

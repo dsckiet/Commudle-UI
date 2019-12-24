@@ -128,7 +128,7 @@ class _ProfileScreenState extends State<ProfileScreen> {
                       style: TextStyle(
                           fontSize: 20.0,
                           fontWeight: FontWeight.bold,
-                          fontFamily: 'Montserrat',
+                          fontFamily: 'Product Sans',
                           color: Colors.white),
                     ),
                   ),

@@ -41,6 +41,7 @@ class _IntroScreenState extends State<IntroScreen> {
                 child: Text(
                   "Get Started",
                   style: TextStyle(
+                    fontFamily: 'Product Sans',
                     fontSize: 20.0,
                     fontWeight: FontWeight.bold,
                     color: const Color(0xFF4285F4),
