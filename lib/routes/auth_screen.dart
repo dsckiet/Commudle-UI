@@ -43,6 +43,7 @@ class _AuthScreenState extends State<AuthScreen> {
                         "Sign in with Google",
                         style: TextStyle(
                             fontSize: 20,
+                            fontFamily: 'Product Sans',
                             fontWeight: FontWeight.bold,
                             color: const Color(0xFF4285F4)),
                       )

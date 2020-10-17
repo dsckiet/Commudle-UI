@@ -125,7 +125,7 @@ class _EventDetailsScreenState extends State<EventDetailsScreen> {
                         Text(
                           'Dev iO\'19',
                           style: TextStyle(
-                              fontFamily: 'Montserrat',
+                              fontFamily: 'Product Sans',
                               fontSize: 36.0,
                               fontWeight: FontWeight.w600,
                               color: const Color(0xFF4285F4)),
@@ -133,7 +133,7 @@ class _EventDetailsScreenState extends State<EventDetailsScreen> {
                         Text(
                           'Sunday, 29-sept-2019',
                           style: TextStyle(
-                            fontFamily: 'Montserrat',
+                            fontFamily: 'Product Sans',
                             fontSize: 16.0,
                             color: Colors.white,
                           ),
@@ -141,7 +141,7 @@ class _EventDetailsScreenState extends State<EventDetailsScreen> {
                         Text(
                           '09:00AM To 04:30PM',
                           style: TextStyle(
-                            fontFamily: 'Montserrat',
+                            fontFamily: 'Product Sans',
                             fontSize: 16.0,
                             color: Colors.white,
                           ),
@@ -154,7 +154,7 @@ class _EventDetailsScreenState extends State<EventDetailsScreen> {
                             child: Text(
                               'Register',
                               style: TextStyle(
-                                fontFamily: 'Montserrat',
+                                fontFamily: 'Product Sans',
                                 fontSize: 16.0,
                                 color: Colors.white,
                               ),
@@ -217,7 +217,7 @@ class _EventDetailsScreenState extends State<EventDetailsScreen> {
                     child: Text(
                       'Speakers',
                       style: TextStyle(
-                        fontFamily: 'Montserrat',
+                        fontFamily: 'Product Sans',
                         fontSize: 14.0,
                         fontWeight: FontWeight.w600,
                         color: Color(0xFF444444),
@@ -238,7 +238,7 @@ class _EventDetailsScreenState extends State<EventDetailsScreen> {
                     child: Text(
                       'Schedule',
                       style: TextStyle(
-                        fontFamily: 'Montserrat',
+                        fontFamily: 'Product Sans',
                         fontSize: 14.0,
                         fontWeight: FontWeight.w600,
                         color: Color(0xFF444444),
@@ -259,7 +259,7 @@ class _EventDetailsScreenState extends State<EventDetailsScreen> {
                     child: Text(
                       'Disussion',
                       style: TextStyle(
-                        fontFamily: 'Montserrat',
+                        fontFamily: 'Product Sans',
                         fontSize: 14.0,
                         fontWeight: FontWeight.w600,
                         color: Color(0xFF444444),
@@ -315,7 +315,7 @@ class _EventDetailsScreenState extends State<EventDetailsScreen> {
                     style: TextStyle(
                         fontSize: 20.0,
                         fontWeight: FontWeight.bold,
-                        fontFamily: 'Montserrat',
+                        fontFamily: 'Product Sans',
                         color: Colors.white),
                   ),
                 ),
